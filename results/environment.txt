@@ -1,0 +1,14 @@
+python 3.13.5
+platform Windows-11-10.0.26300-SP0
+processor Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+logical_cpus 12
+numpy 2.2.6
+scipy 1.17.0
+pandas 2.3.1
+sklearn 1.9.1
+joblib 1.6.0
+matplotlib 3.10.3
+qiskit 2.6.0
+qiskit_aer 0.18.0
+qiskit_ibm_runtime 0.50.0
+pennylane 0.45.1

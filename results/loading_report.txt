@@ -1,0 +1,65 @@
+EXACT AMPLITUDE LOADING, dense real vector: median two-qubit gates
+toolchain  pennylane  qiskit_opt1  qiskit_opt3  qiskit_routed_opt1  qiskit_routed_opt3
+n                                                                                     
+1                0.0          NaN          NaN                 NaN                 NaN
+2                2.0          1.0          1.0                 1.0                 1.0
+3                6.0          4.0          4.0                 7.0                 5.0
+4               14.0         11.0         11.0                23.0                17.0
+5               30.0         26.0         26.0                62.0                48.0
+6               62.0         57.0         57.0               129.0                94.0
+7              126.0        120.0        120.0               285.0               219.0
+8              254.0        247.0        247.0               598.0               460.0
+9              510.0        502.0        502.0                 NaN                 NaN
+10            1022.0       1013.0       1013.0                 NaN                 NaN
+11            2046.0       2036.0       2036.0                 NaN                 NaN
+12            4094.0       4083.0       4083.0                 NaN                 NaN
+
+FORMULA CHECK: PennyLane = 2^n - 2, Qiskit opt1 = 2^n - n - 1 ; mismatches: none
+
+LOG-LINEAR SLOPE of log2(G_load) vs n
+         toolchain  n_from  n_to  slope     lo     hi
+         pennylane       2    12 1.0675 1.0205 1.1145
+       qiskit_opt1       5    12 1.0371 1.0172 1.0569
+       qiskit_opt3       5    12 1.0371 1.0172 1.0569
+qiskit_routed_opt1       5     8 1.0953 1.0456 1.1450
+qiskit_routed_opt3       5     8 1.1002 0.9604 1.2400
+
+FAMILIES at n = 8 and the largest n (median two-qubit gates; qiskit_opt1, pennylane)
+toolchain         pennylane  qiskit_opt1
+n  family                               
+8  dense_complex      508.0        247.0
+   dense_real         254.0        247.0
+   gaussian_bump      254.0        247.0
+   product            254.0          0.0
+   sparse4            254.0        247.0
+12 dense_complex     8188.0       4083.0
+   dense_real        4094.0       4083.0
+   gaussian_bump     4094.0          NaN
+   product           4094.0          0.0
+   sparse4           4094.0        756.0
+
+COST RATIO Q_entry / C_cl = 2 G S / (2 N)
+eps                0.01   0.05   0.10
+toolchain   n                        
+pennylane   2   1250.00  50.00  12.50
+            3   1875.00  75.00  18.75
+            4   2187.50  87.50  21.88
+            5   2343.75  93.75  23.44
+            6   2421.88  96.88  24.22
+            7   2460.94  98.44  24.61
+            8   2480.47  99.22  24.80
+            9   2490.23  99.61  24.90
+            10  2495.12  99.80  24.95
+            11  2497.56  99.90  24.98
+            12  2498.78  99.95  24.99
+qiskit_opt1 2    625.00  25.00   6.25
+            3   1250.00  50.00  12.50
+            4   1718.75  68.75  17.19
+            5   2031.25  81.25  20.31
+            6   2226.56  89.06  22.27
+            7   2343.75  93.75  23.44
+            8   2412.11  96.48  24.12
+            9   2451.17  98.05  24.51
+            10  2473.14  98.93  24.73
+            11  2485.35  99.41  24.85
+            12  2492.07  99.68  24.92

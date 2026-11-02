@@ -1,0 +1,72 @@
+Extended grid: [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 64.0]
+
+SHARE OF CELLS AT THE NEW UPPER EDGE s = 64
+kernel             angle/fidelity_ext  angle/projected_ext  classical/rbf_ext
+labeller n_qubits                                                            
+iqp      4                      0.000                0.000              0.000
+         6                      0.042                0.017              0.000
+         8                      0.150                0.150              0.142
+zz       4                      0.025                0.017              0.008
+         6                      0.108                0.117              0.050
+         8                      0.183                0.108              0.142
+
+MEDIAN TUNED s ON THE EXTENDED GRID
+kernel             angle/fidelity_ext  angle/projected_ext  classical/rbf_ext
+labeller n_qubits                                                            
+iqp      4                        2.0                  2.0                2.0
+         6                        4.0                  4.0                2.0
+         8                        8.0                  8.0                4.0
+zz       4                        4.0                  4.0                4.0
+         6                        8.0                  8.0                4.0
+         8                       12.0                  8.0                4.0
+
+PAIRED ACCURACY DIFFERENCE TO THE EXTENDED-GRID RBF KERNEL (advantage if lo > 0)
+labeller  n_qubits     dataset              kernel    mean      lo      hi  advantage
+     iqp         4      POOLED        iqp/fidelity  0.0731  0.0574  0.0887       True
+     iqp         4 POOLED_REAL        iqp/fidelity  0.0471  0.0263  0.0679       True
+     iqp         4      POOLED  angle/fidelity_ext -0.0423 -0.0623 -0.0224      False
+     iqp         4 POOLED_REAL  angle/fidelity_ext -0.0135 -0.0383  0.0112      False
+     iqp         4      POOLED angle/projected_ext -0.0124 -0.0285  0.0038      False
+     iqp         4 POOLED_REAL angle/projected_ext -0.0038 -0.0218  0.0142      False
+     iqp         4      POOLED       classical/rbf  0.0000 -0.0000  0.0000      False
+     iqp         4 POOLED_REAL       classical/rbf  0.0000 -0.0000  0.0000      False
+     iqp         6      POOLED        iqp/fidelity  0.2001  0.1750  0.2251       True
+     iqp         6 POOLED_REAL        iqp/fidelity  0.1503  0.1222  0.1784       True
+     iqp         6      POOLED  angle/fidelity_ext -0.0072 -0.0387  0.0243      False
+     iqp         6 POOLED_REAL  angle/fidelity_ext -0.0078 -0.0424  0.0267      False
+     iqp         6      POOLED angle/projected_ext -0.0163 -0.0431  0.0106      False
+     iqp         6 POOLED_REAL angle/projected_ext -0.0187 -0.0542  0.0169      False
+     iqp         6      POOLED       classical/rbf -0.0000 -0.0000  0.0000      False
+     iqp         6 POOLED_REAL       classical/rbf -0.0000 -0.0000  0.0000      False
+     iqp         8      POOLED        iqp/fidelity  0.2057  0.1708  0.2405       True
+     iqp         8 POOLED_REAL        iqp/fidelity  0.1725  0.1327  0.2123       True
+     iqp         8      POOLED  angle/fidelity_ext -0.0016 -0.0370  0.0339      False
+     iqp         8 POOLED_REAL  angle/fidelity_ext -0.0046 -0.0427  0.0335      False
+     iqp         8      POOLED angle/projected_ext -0.0132 -0.0523  0.0258      False
+     iqp         8 POOLED_REAL angle/projected_ext -0.0341 -0.0902  0.0220      False
+     iqp         8      POOLED       classical/rbf -0.0031 -0.0116  0.0055      False
+     iqp         8 POOLED_REAL       classical/rbf -0.0041 -0.0167  0.0085      False
+      zz         4      POOLED         zz/fidelity  0.1655  0.1305  0.2005       True
+      zz         4 POOLED_REAL         zz/fidelity  0.1212  0.0775  0.1649       True
+      zz         4      POOLED  angle/fidelity_ext -0.0724 -0.1013 -0.0435      False
+      zz         4 POOLED_REAL  angle/fidelity_ext -0.0796 -0.1104 -0.0487      False
+      zz         4      POOLED angle/projected_ext -0.0436 -0.0729 -0.0143      False
+      zz         4 POOLED_REAL angle/projected_ext -0.0422 -0.0738 -0.0105      False
+      zz         4      POOLED       classical/rbf  0.0003 -0.0009  0.0016      False
+      zz         4 POOLED_REAL       classical/rbf -0.0000 -0.0000  0.0000      False
+      zz         6      POOLED         zz/fidelity  0.1772  0.1369  0.2174       True
+      zz         6 POOLED_REAL         zz/fidelity  0.1362  0.0984  0.1741       True
+      zz         6      POOLED  angle/fidelity_ext  0.0066 -0.0213  0.0345      False
+      zz         6 POOLED_REAL  angle/fidelity_ext  0.0011 -0.0322  0.0344      False
+      zz         6      POOLED angle/projected_ext  0.0099 -0.0182  0.0380      False
+      zz         6 POOLED_REAL angle/projected_ext  0.0131 -0.0193  0.0455      False
+      zz         6      POOLED       classical/rbf -0.0006 -0.0090  0.0079      False
+      zz         6 POOLED_REAL       classical/rbf -0.0004 -0.0124  0.0117      False
+      zz         8      POOLED         zz/fidelity  0.0977  0.0697  0.1258       True
+      zz         8 POOLED_REAL         zz/fidelity  0.0986  0.0543  0.1429       True
+      zz         8      POOLED  angle/fidelity_ext -0.0098 -0.0519  0.0323      False
+      zz         8 POOLED_REAL  angle/fidelity_ext -0.0167 -0.0741  0.0406      False
+      zz         8      POOLED angle/projected_ext -0.0018 -0.0316  0.0280      False
+      zz         8 POOLED_REAL angle/projected_ext -0.0125 -0.0604  0.0354      False
+      zz         8      POOLED       classical/rbf -0.0043 -0.0141  0.0055      False
+      zz         8 POOLED_REAL       classical/rbf -0.0059 -0.0204  0.0086      False

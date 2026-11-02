@@ -1,0 +1,25 @@
+Stationarity index (0 = stationary); 300 pairs per cell, shift U(-0.5, 0.5) per feature
+
+                              count    25%    50%    75%  median_s
+kernel             bandwidth                                      
+amplitude/fidelity none       320.0  0.184  0.240  0.283       NaN
+angle/fidelity     s=1        320.0  0.000  0.000  0.000      1.00
+                   tuned      320.0  0.000  0.000  0.000      1.00
+angle/projected    s=1        320.0  0.000  0.000  0.000      1.00
+                   tuned      320.0  0.000  0.000  0.000      0.50
+iqp/fidelity       s=1        320.0  0.452  0.526  0.620      1.00
+                   tuned      320.0  0.119  0.166  0.200      0.25
+iqp/projected      s=1        320.0  0.809  0.938  1.032      1.00
+                   tuned      320.0  0.101  0.152  0.230      0.25
+zz/fidelity        s=1        320.0  0.880  1.022  1.130      1.00
+                   tuned      320.0  0.117  0.182  0.224      0.10
+zz/projected       s=1        320.0  1.192  1.258  1.313      1.00
+                   tuned      320.0  0.063  0.368  0.487      0.10
+
+EXPLORATORY: Spearman correlation over cells, index at tuned s vs accuracy difference to tuned RBF
+            kernel  cells  spearman_r      p
+amplitude/fidelity    320      0.2375 0.0000
+      iqp/fidelity    320     -0.0421 0.4532
+     iqp/projected    320     -0.0296 0.5976
+       zz/fidelity    320      0.0050 0.9286
+      zz/projected    320      0.0200 0.7216

@@ -1,0 +1,27 @@
+setting,scope,n_datasets,datasets,mean,lo,hi,noninferior,lower,median_gate_saving
+"no dimension reduction, kmeans 0.25 of points",all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.024051587301587293,-0.03650105611668089,-0.011602118486493692,False,True,10.436143332776247
+"no dimension reduction, kmeans 0.25 of points",real datasets,3,breast_cancer wine digits38,-0.013436507936507932,-0.024586943896392693,-0.002286071976623172,False,True,10.418241303331774
+"no dimension reduction, kmeans 0.5 of points",all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.010959772798008091,-0.019608332458169307,-0.0023112131378468757,True,True,3.3914382828244
+"no dimension reduction, kmeans 0.5 of points",real datasets,3,breast_cancer wine digits38,-0.005586212262682853,-0.014472518104538675,0.0033000935791729687,True,False,3.396695474236455
+"no dimension reduction, uniform 0.25 of points",all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.03687433862433862,-0.050360988528020026,-0.023387688720657218,False,True,10.436143332776247
+"no dimension reduction, uniform 0.25 of points",real datasets,3,breast_cancer wine digits38,-0.027748677248677252,-0.045460384504878056,-0.010036969992476448,False,True,10.418241303331774
+"no dimension reduction, uniform 0.5 of points",all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.012787815126050418,-0.02283926603494668,-0.002736364217154152,False,True,3.3914382828244
+"no dimension reduction, uniform 0.5 of points",real datasets,3,breast_cancer wine digits38,-0.01357563025210084,-0.02712818857037568,-2.3071933825998675e-05,False,True,3.396695474236455
+pca k=16,all datasets,5,breast_cancer digits38 synth_r16 synth_r4 synth_r64,-0.027582539682539688,-0.041779700904354414,-0.01338537846072496,False,True,5.1818181818181825
+pca k=16,real datasets,2,breast_cancer digits38,-0.01195634920634921,-0.02857601741420315,0.0046633190015047295,False,False,3.7727272727272734
+pca k=32,all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.034206349206349206,-0.0485637060144916,-0.01984899239820681,False,True,2.1923076923076925
+"pca k=32, kmeans 0.25 of points",all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.06266269841269842,-0.08133570699988261,-0.043989689825514225,False,True,22.918484063330038
+"pca k=32, kmeans 0.5 of points",all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.04405357142857143,-0.05987584737090773,-0.028231295486235125,False,True,7.435076235422724
+"pca k=32, uniform 0.25 of points",all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.07123015873015873,-0.09013399194101478,-0.05232632551930268,False,True,22.918484063330038
+"pca k=32, uniform 0.5 of points",all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.04806547619047619,-0.060639495175078856,-0.03549145720587353,False,True,7.435076235422724
+pca k=4,all datasets,2,breast_cancer wine,-0.034601307189542484,-0.06676699374877243,-0.002435620630312531,False,True,18.5
+pca k=4,real datasets,2,breast_cancer wine,-0.034601307189542484,-0.06676699374877243,-0.002435620630312531,False,True,18.5
+pca k=8,all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.03399416433239962,-0.050645482578308615,-0.01734284608649063,False,True,14.25
+pca k=8,real datasets,3,breast_cancer wine digits38,-0.01198832866479926,-0.031059180336468196,0.007082523006869675,False,False,6.5
+randproj k=16,all datasets,5,breast_cancer digits38 synth_r16 synth_r4 synth_r64,-0.12394126984126985,-0.14902914212326182,-0.0988533975592779,False,True,5.1818181818181825
+randproj k=16,real datasets,2,breast_cancer digits38,-0.03285317460317461,-0.05564930116168827,-0.010057048044660951,False,True,3.7727272727272734
+randproj k=32,all datasets,4,digits38 synth_r16 synth_r4 synth_r64,-0.07502777777777776,-0.09734821505012362,-0.05270734050543191,False,True,2.1923076923076925
+randproj k=4,all datasets,2,breast_cancer wine,-0.16008496732026142,-0.22909095853829864,-0.09107897610222421,False,True,18.5
+randproj k=4,real datasets,2,breast_cancer wine,-0.16008496732026142,-0.22909095853829864,-0.09107897610222421,False,True,18.5
+randproj k=8,all datasets,6,breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine,-0.16793510737628384,-0.19523517047820926,-0.1406350442743584,False,True,14.25
+randproj k=8,real datasets,3,breast_cancer wine digits38,-0.07820354808590102,-0.10956566618695979,-0.04684142998484226,False,True,6.5

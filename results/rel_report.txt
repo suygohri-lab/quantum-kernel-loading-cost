@@ -1,0 +1,235 @@
+tie rule = middle, grid = [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]
+
+ENGINEERED LABELS
+labeller  n_qubits       dataset  points  share_ones  g_label
+     iqp         4 breast_cancer     500       0.500   11.034
+      zz         4 breast_cancer     500       0.500   30.584
+     iqp         6 breast_cancer     500       0.500   26.924
+      zz         6 breast_cancer     500       0.500   14.372
+     iqp         8 breast_cancer     500       0.500   23.277
+      zz         8 breast_cancer     500       0.500   11.291
+     iqp         4    ionosphere     351       0.499   26.416
+      zz         4    ionosphere     351       0.499   32.355
+     iqp         6    ionosphere     351       0.499   27.271
+      zz         6    ionosphere     351       0.499   23.333
+     iqp         8    ionosphere     351       0.499   25.522
+      zz         8    ionosphere     351       0.499   21.161
+     iqp         4         sonar     208       0.500   13.527
+      zz         4         sonar     208       0.500   16.884
+     iqp         6         sonar     208       0.500   13.178
+      zz         6         sonar     208       0.500   11.134
+     iqp         8         sonar     208       0.500   10.750
+      zz         8         sonar     208       0.500   10.031
+     iqp         4      spambase     500       0.500   12.870
+      zz         4      spambase     500       0.500   44.276
+     iqp         6      spambase     500       0.500   19.474
+      zz         6      spambase     500       0.500   43.157
+     iqp         8      spambase     500       0.500   28.858
+      zz         8      spambase     500       0.500   36.317
+     iqp         4     synth_r16     500       0.500   25.690
+      zz         4     synth_r16     500       0.500   25.164
+     iqp         6     synth_r16     500       0.500   16.987
+      zz         6     synth_r16     500       0.500   12.513
+     iqp         8     synth_r16     500       0.500   10.310
+      zz         8     synth_r16     500       0.500    9.762
+     iqp         4     synth_r64     500       0.500   27.601
+      zz         4     synth_r64     500       0.500   26.289
+     iqp         6     synth_r64     500       0.500   15.923
+      zz         6     synth_r64     500       0.500   12.442
+     iqp         8     synth_r64     500       0.500   10.291
+      zz         8     synth_r64     500       0.500    9.722
+
+PAIRED ACCURACY DIFFERENCE TO THE TUNED RBF KERNEL (advantage if lo > 0)
+labeller  n_qubits     dataset                 kernel    mean      lo      hi advantage
+     iqp         4      POOLED         angle/fidelity -0.0423 -0.0623 -0.0224     False
+     iqp         4 POOLED_REAL         angle/fidelity -0.0135 -0.0383  0.0112     False
+     iqp         4      POOLED        angle/projected -0.0124 -0.0285  0.0038     False
+     iqp         4 POOLED_REAL        angle/projected -0.0038 -0.0218  0.0142     False
+     iqp         4      POOLED          classical/gbm -0.1436 -0.1668 -0.1205     False
+     iqp         4 POOLED_REAL          classical/gbm -0.1132 -0.1432 -0.0832     False
+     iqp         4      POOLED    classical/rbf_scale -0.0151 -0.0304  0.0003     False
+     iqp         4 POOLED_REAL    classical/rbf_scale -0.0041 -0.0234  0.0152     False
+     iqp         4      POOLED           classical/rf -0.1048 -0.1239 -0.0856     False
+     iqp         4 POOLED_REAL           classical/rf -0.0831 -0.1165 -0.0498     False
+     iqp         4      POOLED           iqp/fidelity  0.0731  0.0574  0.0887      True
+     iqp         4 POOLED_REAL           iqp/fidelity  0.0471  0.0263  0.0679      True
+     iqp         4      POOLED iqp/fidelity_oracle_s1  0.0731  0.0574  0.0887      True
+     iqp         4 POOLED_REAL iqp/fidelity_oracle_s1  0.0471  0.0263  0.0679      True
+     iqp         4      POOLED          iqp/projected  0.0097 -0.0086  0.0281     False
+     iqp         4 POOLED_REAL          iqp/projected -0.0074 -0.0279  0.0131     False
+     iqp         4      POOLED            zz/fidelity  0.0299  0.0141  0.0457      True
+     iqp         4 POOLED_REAL            zz/fidelity  0.0186 -0.0067  0.0440     False
+     iqp         4      POOLED           zz/projected  0.0203  0.0012  0.0395      True
+     iqp         4 POOLED_REAL           zz/projected  0.0160 -0.0136  0.0456     False
+     iqp         4      POOLED E3: oracle minus tuned  0.0000  0.0000  0.0000      None
+     iqp         6      POOLED         angle/fidelity -0.0080 -0.0331  0.0170     False
+     iqp         6 POOLED_REAL         angle/fidelity -0.0066 -0.0409  0.0277     False
+     iqp         6      POOLED        angle/projected -0.0138 -0.0393  0.0117     False
+     iqp         6 POOLED_REAL        angle/projected -0.0187 -0.0542  0.0169     False
+     iqp         6      POOLED          classical/gbm -0.0514 -0.0841 -0.0187     False
+     iqp         6 POOLED_REAL          classical/gbm -0.0733 -0.1150 -0.0317     False
+     iqp         6      POOLED    classical/rbf_scale -0.0341 -0.0609 -0.0073     False
+     iqp         6 POOLED_REAL    classical/rbf_scale -0.0539 -0.0887 -0.0190     False
+     iqp         6      POOLED           classical/rf -0.0283 -0.0568  0.0002     False
+     iqp         6 POOLED_REAL           classical/rf -0.0385 -0.0775  0.0005     False
+     iqp         6      POOLED           iqp/fidelity  0.2001  0.1750  0.2251      True
+     iqp         6 POOLED_REAL           iqp/fidelity  0.1503  0.1222  0.1784      True
+     iqp         6      POOLED iqp/fidelity_oracle_s1  0.2001  0.1750  0.2251      True
+     iqp         6 POOLED_REAL iqp/fidelity_oracle_s1  0.1503  0.1222  0.1784      True
+     iqp         6      POOLED          iqp/projected  0.0346  0.0023  0.0669      True
+     iqp         6 POOLED_REAL          iqp/projected  0.0412  0.0104  0.0720      True
+     iqp         6      POOLED            zz/fidelity  0.0964  0.0657  0.1271      True
+     iqp         6 POOLED_REAL            zz/fidelity  0.0926  0.0551  0.1300      True
+     iqp         6      POOLED           zz/projected  0.0572  0.0307  0.0837      True
+     iqp         6 POOLED_REAL           zz/projected  0.0473  0.0135  0.0811      True
+     iqp         6      POOLED E3: oracle minus tuned  0.0000  0.0000  0.0000      None
+     iqp         8      POOLED         angle/fidelity  0.0065 -0.0188  0.0317     False
+     iqp         8 POOLED_REAL         angle/fidelity -0.0038 -0.0307  0.0231     False
+     iqp         8      POOLED        angle/projected -0.0055 -0.0287  0.0177     False
+     iqp         8 POOLED_REAL        angle/projected -0.0268 -0.0566  0.0030     False
+     iqp         8      POOLED          classical/gbm -0.0438 -0.0687 -0.0190     False
+     iqp         8 POOLED_REAL          classical/gbm -0.0607 -0.0948 -0.0266     False
+     iqp         8      POOLED    classical/rbf_scale -0.0489 -0.0782 -0.0197     False
+     iqp         8 POOLED_REAL    classical/rbf_scale -0.0472 -0.0835 -0.0109     False
+     iqp         8      POOLED           classical/rf -0.0480 -0.0770 -0.0190     False
+     iqp         8 POOLED_REAL           classical/rf -0.0620 -0.1010 -0.0229     False
+     iqp         8      POOLED           iqp/fidelity  0.2088  0.1787  0.2388      True
+     iqp         8 POOLED_REAL           iqp/fidelity  0.1766  0.1429  0.2103      True
+     iqp         8      POOLED iqp/fidelity_oracle_s1  0.2113  0.1807  0.2419      True
+     iqp         8 POOLED_REAL iqp/fidelity_oracle_s1  0.1804  0.1478  0.2130      True
+     iqp         8      POOLED          iqp/projected  0.0141 -0.0068  0.0350     False
+     iqp         8 POOLED_REAL          iqp/projected  0.0032 -0.0240  0.0304     False
+     iqp         8      POOLED            zz/fidelity  0.0899  0.0664  0.1133      True
+     iqp         8 POOLED_REAL            zz/fidelity  0.0935  0.0632  0.1239      True
+     iqp         8      POOLED           zz/projected  0.0178 -0.0076  0.0433     False
+     iqp         8 POOLED_REAL           zz/projected  0.0308  0.0005  0.0610      True
+     iqp         8      POOLED E3: oracle minus tuned  0.0025 -0.0054  0.0104      None
+      zz         4      POOLED         angle/fidelity -0.0756 -0.1085 -0.0427     False
+      zz         4 POOLED_REAL         angle/fidelity -0.0838 -0.1182 -0.0495     False
+      zz         4      POOLED        angle/projected -0.0379 -0.0622 -0.0135     False
+      zz         4 POOLED_REAL        angle/projected -0.0355 -0.0651 -0.0060     False
+      zz         4      POOLED          classical/gbm -0.0854 -0.1124 -0.0584     False
+      zz         4 POOLED_REAL          classical/gbm -0.0811 -0.1143 -0.0479     False
+      zz         4      POOLED    classical/rbf_scale -0.1209 -0.1460 -0.0957     False
+      zz         4 POOLED_REAL    classical/rbf_scale -0.1318 -0.1622 -0.1013     False
+      zz         4      POOLED           classical/rf -0.0580 -0.0755 -0.0405     False
+      zz         4 POOLED_REAL           classical/rf -0.0538 -0.0816 -0.0259     False
+      zz         4      POOLED           iqp/fidelity -0.0466 -0.0828 -0.0105     False
+      zz         4 POOLED_REAL           iqp/fidelity -0.0514 -0.0903 -0.0126     False
+      zz         4      POOLED          iqp/projected -0.0457 -0.0828 -0.0086     False
+      zz         4 POOLED_REAL          iqp/projected -0.0373 -0.0874  0.0129     False
+      zz         4      POOLED            zz/fidelity  0.1651  0.1299  0.2003      True
+      zz         4 POOLED_REAL            zz/fidelity  0.1212  0.0775  0.1649      True
+      zz         4      POOLED  zz/fidelity_oracle_s1  0.1658  0.1325  0.1991      True
+      zz         4 POOLED_REAL  zz/fidelity_oracle_s1  0.1222  0.0814  0.1630      True
+      zz         4      POOLED           zz/projected  0.0285 -0.0006  0.0577     False
+      zz         4 POOLED_REAL           zz/projected -0.0112 -0.0500  0.0276     False
+      zz         4      POOLED E3: oracle minus tuned  0.0007 -0.0055  0.0068      None
+      zz         6      POOLED         angle/fidelity -0.0003 -0.0286  0.0280     False
+      zz         6 POOLED_REAL         angle/fidelity  0.0028 -0.0264  0.0320     False
+      zz         6      POOLED        angle/projected  0.0014 -0.0275  0.0303     False
+      zz         6 POOLED_REAL        angle/projected  0.0043 -0.0273  0.0360     False
+      zz         6      POOLED          classical/gbm -0.0339 -0.0689  0.0010     False
+      zz         6 POOLED_REAL          classical/gbm -0.0399 -0.0914  0.0115     False
+      zz         6      POOLED    classical/rbf_scale -0.0484 -0.0733 -0.0235     False
+      zz         6 POOLED_REAL    classical/rbf_scale -0.0636 -0.0920 -0.0352     False
+      zz         6      POOLED           classical/rf -0.0339 -0.0624 -0.0053     False
+      zz         6 POOLED_REAL           classical/rf -0.0296 -0.0651  0.0060     False
+      zz         6      POOLED           iqp/fidelity  0.0136 -0.0173  0.0445     False
+      zz         6 POOLED_REAL           iqp/fidelity  0.0157 -0.0308  0.0621     False
+      zz         6      POOLED          iqp/projected  0.0046 -0.0270  0.0362     False
+      zz         6 POOLED_REAL          iqp/projected -0.0096 -0.0486  0.0294     False
+      zz         6      POOLED            zz/fidelity  0.1777  0.1373  0.2181      True
+      zz         6 POOLED_REAL            zz/fidelity  0.1366  0.0951  0.1781      True
+      zz         6      POOLED  zz/fidelity_oracle_s1  0.1799  0.1390  0.2209      True
+      zz         6 POOLED_REAL  zz/fidelity_oracle_s1  0.1399  0.0957  0.1841      True
+      zz         6      POOLED           zz/projected  0.0064 -0.0212  0.0339     False
+      zz         6 POOLED_REAL           zz/projected  0.0026 -0.0292  0.0343     False
+      zz         6      POOLED E3: oracle minus tuned  0.0022 -0.0050  0.0094      None
+      zz         8      POOLED         angle/fidelity -0.0111 -0.0355  0.0133     False
+      zz         8 POOLED_REAL         angle/fidelity -0.0199 -0.0540  0.0142     False
+      zz         8      POOLED        angle/projected -0.0012 -0.0318  0.0294     False
+      zz         8 POOLED_REAL        angle/projected -0.0110 -0.0591  0.0370     False
+      zz         8      POOLED          classical/gbm -0.0149 -0.0387  0.0089     False
+      zz         8 POOLED_REAL          classical/gbm -0.0296 -0.0612  0.0019     False
+      zz         8      POOLED    classical/rbf_scale -0.0591 -0.0788 -0.0395     False
+      zz         8 POOLED_REAL    classical/rbf_scale -0.0785 -0.1060 -0.0510     False
+      zz         8      POOLED           classical/rf -0.0348 -0.0528 -0.0167     False
+      zz         8 POOLED_REAL           classical/rf -0.0454 -0.0793 -0.0115     False
+      zz         8      POOLED           iqp/fidelity  0.0072 -0.0248  0.0392     False
+      zz         8 POOLED_REAL           iqp/fidelity  0.0033 -0.0296  0.0363     False
+      zz         8      POOLED          iqp/projected  0.0124 -0.0148  0.0397     False
+      zz         8 POOLED_REAL          iqp/projected  0.0079 -0.0288  0.0446     False
+      zz         8      POOLED            zz/fidelity  0.1020  0.0721  0.1320      True
+      zz         8 POOLED_REAL            zz/fidelity  0.1046  0.0587  0.1504      True
+      zz         8      POOLED  zz/fidelity_oracle_s1  0.1038  0.0746  0.1330      True
+      zz         8 POOLED_REAL  zz/fidelity_oracle_s1  0.1037  0.0576  0.1498      True
+      zz         8      POOLED           zz/projected  0.0177 -0.0179  0.0534     False
+      zz         8 POOLED_REAL           zz/projected  0.0164 -0.0292  0.0619     False
+      zz         8      POOLED E3: oracle minus tuned  0.0018 -0.0035  0.0070      None
+
+PER DATASET, LABELLING KERNEL TUNED ON THE GRID
+labeller  n_qubits       dataset   mean      lo     hi advantage
+     iqp         4 breast_cancer 0.0270 -0.0009 0.0549     False
+     iqp         4    ionosphere 0.0344 -0.0048 0.0736     False
+     iqp         4         sonar 0.1250  0.0410 0.2090      True
+     iqp         4      spambase 0.0020 -0.0112 0.0152     False
+     iqp         4     synth_r16 0.1310  0.0815 0.1805      True
+     iqp         4     synth_r64 0.1190  0.0766 0.1614      True
+     iqp         6 breast_cancer 0.1750  0.1266 0.2234      True
+     iqp         6    ionosphere 0.1495  0.0846 0.2144      True
+     iqp         6         sonar 0.2529  0.1665 0.3392      True
+     iqp         6      spambase 0.0240 -0.0163 0.0643     False
+     iqp         6     synth_r16 0.3230  0.2608 0.3852      True
+     iqp         6     synth_r64 0.2760  0.2195 0.3325      True
+     iqp         8 breast_cancer 0.3400  0.2897 0.3903      True
+     iqp         8    ionosphere 0.1625  0.0774 0.2476      True
+     iqp         8         sonar 0.1600  0.0709 0.2491      True
+     iqp         8      spambase 0.0440  0.0064 0.0816      True
+     iqp         8     synth_r16 0.2800  0.2277 0.3323      True
+     iqp         8     synth_r64 0.2660  0.1870 0.3450      True
+      zz         4 breast_cancer 0.1680  0.0512 0.2848      True
+      zz         4    ionosphere 0.0769  0.0329 0.1210      True
+      zz         4         sonar 0.2010  0.0773 0.3246      True
+      zz         4      spambase 0.0390  0.0043 0.0737      True
+      zz         4     synth_r16 0.2510  0.2052 0.2968      True
+      zz         4     synth_r64 0.2550  0.1973 0.3127      True
+      zz         6 breast_cancer 0.2100  0.1194 0.3006      True
+      zz         6    ionosphere 0.1095  0.0330 0.1859      True
+      zz         6         sonar 0.1949  0.0609 0.3289      True
+      zz         6      spambase 0.0320 -0.0086 0.0726     False
+      zz         6     synth_r16 0.2540  0.1591 0.3489      True
+      zz         6     synth_r64 0.2660  0.1631 0.3689      True
+      zz         8 breast_cancer 0.2120  0.1166 0.3074      True
+      zz         8    ionosphere 0.0869  0.0212 0.1526      True
+      zz         8         sonar 0.0813 -0.0308 0.1934     False
+      zz         8      spambase 0.0380 -0.0157 0.0917     False
+      zz         8     synth_r16 0.0880  0.0185 0.1575      True
+      zz         8     synth_r64 0.1060  0.0264 0.1856      True
+
+MEDIAN TUNED BANDWIDTH
+kernel             angle/fidelity  angle/projected  classical/gbm  classical/rbf  classical/rbf_scale  classical/rf  iqp/fidelity  iqp/fidelity_oracle_s1  iqp/projected  zz/fidelity  zz/fidelity_oracle_s1  zz/projected
+labeller n_qubits                                                                                                                                                                                                         
+iqp      4                    2.0              2.0            NaN            2.0                0.675           NaN           1.0                     1.0            0.5         0.25                    NaN           0.1
+         6                    2.0              2.0            NaN            2.0                0.495           NaN           1.0                     1.0            1.0         0.25                    NaN           0.1
+         8                    4.0              4.0            NaN            4.0                0.386           NaN           1.0                     1.0            1.0         0.25                    NaN           0.1
+zz       4                    4.0              4.0            NaN            4.0                0.671           NaN           1.0                     NaN            1.0         1.00                    1.0           1.0
+         6                    8.0              4.0            NaN            4.0                0.493           NaN           2.0                     NaN            1.0         1.00                    1.0           1.0
+         8                    8.0              8.0            NaN            4.0                0.389           NaN           2.0                     NaN            2.0         1.00                    1.0           1.0
+
+MEDIAN GEOMETRIC DIFFERENCE g(K_RBF,tuned || K), lam = 0.01
+kernel             angle/fidelity  iqp/fidelity  iqp/fidelity_oracle_s1  zz/fidelity  zz/fidelity_oracle_s1
+labeller n_qubits                                                                                          
+iqp      4                   2.38          5.16                    5.16          NaN                    NaN
+         6                   2.58          6.86                    6.86          NaN                    NaN
+         8                   1.80          3.29                    3.29          NaN                    NaN
+zz       4                   4.01           NaN                     NaN         4.57                   4.58
+         6                   2.99           NaN                     NaN         4.60                   7.52
+         8                   1.77           NaN                     NaN         4.86                   6.40
+
+TWO-QUBIT GATES PER FIDELITY CIRCUIT (routed, opt. level 3)
+n             4      6      8
+embedding                    
+angle       0.0    0.0    0.0
+iqp        64.0  212.0  428.0
+zz         64.0  212.0  428.0

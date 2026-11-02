@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+code/data_cache/
+results/log_*.txt
+results/figs/
+results/tables/
+online_resources/
+.DS_Store

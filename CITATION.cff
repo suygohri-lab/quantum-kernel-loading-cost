@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "What Does Loading Classical Data Cost a Quantum Kernel? Code and results"
+version: 1.0.0
+date-released: 2026-11-02
+license: MIT
+authors:
+  - given-names: Suyash
+    affiliation: "Department of Computer Science & Engineering, Punjab Engineering College, Chandigarh, India"
+    email: suyashsuyash.phd26cse@pec.edu.in
+preferred-citation:
+  type: article
+  title: "What Does Loading Classical Data Cost a Quantum Kernel? A Budget-Matched Benchmark of Encodings, Accuracy and Circuit Cost"
+  authors:
+    - given-names: Suyash
+      affiliation: "Department of Computer Science & Engineering, Punjab Engineering College, Chandigarh, India"
+  journal: "Quantum Machine Intelligence"
+  year: 2026
+  status: submitted

@@ -1,0 +1,30 @@
+Positive control: can the protocol detect a quantum-kernel advantage when the labels are built to contain one, and
+what does that advantage cost to load?
+
+PRE-SPECIFIED DESIGN (fixed on 2026-10-31, before any result of this script was seen; written to relabel_design.txt)
+Datasets: four real (breast_cancer, ionosphere, sonar, spambase; >= 30 features, capped at 500 points) and two synthetic
+(synth_r16, synth_r64 of reduction_study.py; 500 points, 64 features).  Qubits n = 6 and 8 (n = 4 added after the main analysis, to match the main study).
+Features: standardise, PCA to n components and min-max to [0, pi], fitted once on the whole dataset; these n features are
+the new dataset.  The standard protocol then re-applies its own train-only preprocessing in every resample.
+Engineered labels (Huang et al. 2021, Nat. Commun. 12:2631): labelling kernel K_Q = IQP or ZZ fidelity kernel at the
+unscaled bandwidth s = 1; classical reference K_C = RBF with the default bandwidth gamma = 1/(n Var X); both
+trace-normalised to Tr = N.  With S = sqrt(K_Q) and M = S (K_C + lam I)^-1 S (lam = 0.01), v = top eigenvector of M,
+the label of point i is 1 if (S v)_i > median(S v), else 0 (balanced classes).  g_label = sqrt(top eigenvalue of M).
+Protocol: exactly the main study (repeated stratified 10-fold x 2 = 20 resamples, shared grid of 12 bandwidths x 4 C,
+inner 3-fold CV, tie rule from QK_TIE): angle/IQP/ZZ fidelity and projected kernels tuned on the grid, tuned RBF,
+default-bandwidth RBF, random forest and gradient boosting (same grids as the main study), and the labelling kernel
+fixed at s = 1 with C tuned ('oracle': it knows the bandwidth used to make the labels).
+Endpoints (accuracy; corrected resampled t, 95% CI), for each labelling kernel and n:
+  E1  pooled difference of the labelling kernel, tuned on the grid, to the tuned RBF kernel; ADVANTAGE DETECTED if the
+      lower 95% bound > 0.  Also per dataset and for real datasets only.
+  E2  the same for the oracle (s = 1): how much advantage exists when the bandwidth is known.
+  E3  E2 - E1: how much of the engineered advantage the shared tuning grid keeps.
+  E4  the other quantum kernels against the tuned RBF kernel (does a cheaper encoding pick up the advantage?).
+  Cost: two-qubit gates per fidelity circuit of each encoding at n (gate_counts.csv, routed, optimisation level 3).
+  Diagnostics: geometric difference g(K_RBF,tuned || K) on the training block (lam = 0.01) for the tuned and oracle
+  labelling kernel, and the tuned bandwidth of each kernel.
+Expectation stated in advance: a clear advantage for the oracle; part of it kept by tuning, because s = 1 is on the grid;
+little or none for the angle kernels, which are stationary and close to the RBF kernel.
+
+
+RUN: tie rule = middle, grid = [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0], datasets = ['breast_cancer', 'ionosphere', 'sonar', 'spambase', 'synth_r16', 'synth_r64'], n = [4, 6, 8], labellers = ['iqp', 'zz'], 10-fold x 2

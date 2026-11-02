@@ -1,0 +1,178 @@
+1. PER-DATASET EQUIVALENCE TO TUNED RBF (accuracy, margin +/-0.02, corrected-t 95% CI, no correction across datasets)
+                 datasets  equivalent  lower  higher  not_shown_equivalent
+kernel                                                                    
+angle/fidelity         16           9      0       0                     7
+angle/projected        16           6      0       0                    10
+iqp/fidelity           16           7      0       0                     9
+iqp/projected          16           6      0       1                    10
+zz/fidelity            16           5      0       0                    11
+zz/projected           16           5      0       0                    11
+
+Datasets where a quantum kernel was NOT shown equivalent (accuracy):
+         kernel    dataset    mean      lo     hi      verdict
+ angle/fidelity      blood -0.0010 -0.0231 0.0211 inconclusive
+ angle/fidelity   haberman -0.0149 -0.0425 0.0127 inconclusive
+ angle/fidelity       ilpd  0.0010 -0.0324 0.0344 inconclusive
+ angle/fidelity ionosphere  0.0100 -0.0171 0.0372 inconclusive
+ angle/fidelity       iris  0.0100 -0.0174 0.0374 inconclusive
+ angle/fidelity       pima -0.0020 -0.0323 0.0283 inconclusive
+ angle/fidelity      sonar  0.0096 -0.0493 0.0686 inconclusive
+angle/projected      blood  0.0050 -0.0187 0.0287 inconclusive
+angle/projected   digits38 -0.0042 -0.0248 0.0163 inconclusive
+angle/projected   haberman -0.0052 -0.0400 0.0297 inconclusive
+angle/projected       ilpd  0.0050 -0.0285 0.0385 inconclusive
+angle/projected ionosphere  0.0015 -0.0280 0.0310 inconclusive
+angle/projected       iris  0.0067 -0.0184 0.0317 inconclusive
+angle/projected       pima  0.0030 -0.0255 0.0315 inconclusive
+angle/projected      sonar  0.0098 -0.0493 0.0688 inconclusive
+angle/projected   spambase  0.0110 -0.0075 0.0295 inconclusive
+angle/projected       wine  0.0057 -0.0155 0.0269 inconclusive
+   iqp/fidelity      blood -0.0240 -0.0516 0.0036 inconclusive
+   iqp/fidelity   haberman -0.0066 -0.0311 0.0179 inconclusive
+   iqp/fidelity       ilpd -0.0050 -0.0419 0.0319 inconclusive
+   iqp/fidelity ionosphere -0.0027 -0.0356 0.0301 inconclusive
+   iqp/fidelity       iris  0.0067 -0.0243 0.0376 inconclusive
+   iqp/fidelity       pima  0.0030 -0.0183 0.0243 inconclusive
+   iqp/fidelity      sonar  0.0099 -0.0609 0.0806 inconclusive
+   iqp/fidelity   spambase  0.0120 -0.0080 0.0320 inconclusive
+   iqp/fidelity       wine  0.0057 -0.0155 0.0269 inconclusive
+  iqp/projected      blood -0.0120 -0.0405 0.0165 inconclusive
+  iqp/projected   digits38 -0.0112 -0.0318 0.0095 inconclusive
+  iqp/projected   haberman -0.0099 -0.0320 0.0121 inconclusive
+  iqp/projected       ilpd -0.0010 -0.0325 0.0305 inconclusive
+  iqp/projected ionosphere -0.0113 -0.0446 0.0220 inconclusive
+  iqp/projected       iris  0.0033 -0.0253 0.0319 inconclusive
+  iqp/projected       pima  0.0030 -0.0169 0.0229 inconclusive
+  iqp/projected      sonar -0.0117 -0.0753 0.0519 inconclusive
+  iqp/projected   spambase  0.0190  0.0005 0.0375       higher
+  iqp/projected       wine  0.0031 -0.0298 0.0360 inconclusive
+    zz/fidelity      blood -0.0150 -0.0387 0.0087 inconclusive
+    zz/fidelity   digits38 -0.0042 -0.0247 0.0162 inconclusive
+    zz/fidelity   digits49 -0.0097 -0.0271 0.0077 inconclusive
+    zz/fidelity   haberman -0.0048 -0.0317 0.0220 inconclusive
+    zz/fidelity       ilpd -0.0040 -0.0365 0.0285 inconclusive
+    zz/fidelity ionosphere -0.0070 -0.0397 0.0257 inconclusive
+    zz/fidelity       iris  0.0033 -0.0305 0.0372 inconclusive
+    zz/fidelity       pima -0.0020 -0.0364 0.0324 inconclusive
+    zz/fidelity      sonar -0.0167 -0.0794 0.0461 inconclusive
+    zz/fidelity   spambase  0.0040 -0.0201 0.0281 inconclusive
+    zz/fidelity       wine  0.0059 -0.0209 0.0327 inconclusive
+   zz/projected      blood -0.0120 -0.0405 0.0165 inconclusive
+   zz/projected   digits38 -0.0028 -0.0212 0.0156 inconclusive
+   zz/projected   digits49 -0.0097 -0.0234 0.0040 inconclusive
+   zz/projected   haberman -0.0034 -0.0327 0.0258 inconclusive
+   zz/projected       ilpd -0.0080 -0.0489 0.0329 inconclusive
+   zz/projected ionosphere -0.0085 -0.0450 0.0281 inconclusive
+   zz/projected       iris  0.0000 -0.0257 0.0257 inconclusive
+   zz/projected       pima -0.0020 -0.0275 0.0235 inconclusive
+   zz/projected      sonar -0.0430 -0.1197 0.0337 inconclusive
+   zz/projected   spambase  0.0040 -0.0230 0.0310 inconclusive
+   zz/projected       wine  0.0114 -0.0134 0.0363 inconclusive
+
+2. MEAN TEST ACCURACY OF ALL MODELS (mean of dataset means)
+kernel
+classical/rbf_scale           0.8962
+angle/projected               0.8955
+angle/fidelity                0.8943
+classical/rbf                 0.8932
+iqp/fidelity                  0.8930
+iqp/projected                 0.8915
+zz/fidelity                   0.8899
+classical/knn                 0.8897
+zz/projected                  0.8881
+classical/rf                  0.8873
+classical/mlp                 0.8853
+classical/gbm                 0.8843
+classical/linear              0.8512
+classical/poly2_normalised    0.8464
+amplitude/fidelity            0.8454
+
+POOLED PAIRED DIFFERENCE, QUANTUM KERNEL MINUS OTHER CLASSICAL REFERENCE (accuracy)
+          reference          kernel    mean      lo      hi      p  equivalent_95ci
+classical/rbf_scale  angle/fidelity -0.0019 -0.0065  0.0027 0.3909             True
+classical/rbf_scale angle/projected -0.0008 -0.0058  0.0043 0.7560             True
+classical/rbf_scale    iqp/fidelity -0.0032 -0.0105  0.0041 0.3668             True
+classical/rbf_scale   iqp/projected -0.0047 -0.0100  0.0006 0.0791             True
+classical/rbf_scale     zz/fidelity -0.0063 -0.0123 -0.0003 0.0394             True
+classical/rbf_scale    zz/projected -0.0082 -0.0137 -0.0026 0.0063             True
+      classical/gbm  angle/fidelity  0.0100  0.0028  0.0172 0.0091             True
+      classical/gbm angle/projected  0.0111  0.0037  0.0185 0.0052             True
+      classical/gbm    iqp/fidelity  0.0087  0.0008  0.0165 0.0329             True
+      classical/gbm   iqp/projected  0.0072 -0.0005  0.0149 0.0661             True
+      classical/gbm     zz/fidelity  0.0056 -0.0025  0.0137 0.1650             True
+      classical/gbm    zz/projected  0.0037 -0.0048  0.0123 0.3731             True
+       classical/rf  angle/fidelity  0.0070  0.0002  0.0138 0.0447             True
+       classical/rf angle/projected  0.0082  0.0009  0.0154 0.0293             True
+       classical/rf    iqp/fidelity  0.0057 -0.0004  0.0118 0.0659             True
+       classical/rf   iqp/projected  0.0042 -0.0030  0.0114 0.2367             True
+       classical/rf     zz/fidelity  0.0026 -0.0044  0.0096 0.4411             True
+       classical/rf    zz/projected  0.0008 -0.0053  0.0068 0.7931             True
+      classical/knn  angle/fidelity  0.0047 -0.0046  0.0139 0.3046             True
+      classical/knn angle/projected  0.0058 -0.0034  0.0150 0.2009             True
+      classical/knn    iqp/fidelity  0.0033 -0.0056  0.0123 0.4455             True
+      classical/knn   iqp/projected  0.0019 -0.0079  0.0116 0.6946             True
+      classical/knn     zz/fidelity  0.0003 -0.0088  0.0093 0.9524             True
+      classical/knn    zz/projected -0.0016 -0.0101  0.0069 0.6985             True
+      classical/mlp  angle/fidelity  0.0090  0.0008  0.0172 0.0329             True
+      classical/mlp angle/projected  0.0101  0.0018  0.0185 0.0197             True
+      classical/mlp    iqp/fidelity  0.0077 -0.0004  0.0157 0.0605             True
+      classical/mlp   iqp/projected  0.0062 -0.0019  0.0143 0.1249             True
+      classical/mlp     zz/fidelity  0.0046 -0.0051  0.0142 0.3323             True
+      classical/mlp    zz/projected  0.0027 -0.0062  0.0117 0.5296             True
+
+3. GEOMETRY ON THE TRAINING BLOCK (median over dataset-resample cells)
+g_rbf_to_k = g(K_RBF || K_Q): can the tuned RBF reproduce the quantum kernel? Compare with sqrt(N_train).
+                              kta  cka_to_rbf  g_rbf_to_k_lam0.001  g_k_to_rbf_lam0.001  g_rbf_to_k_lam0.01  g_k_to_rbf_lam0.01  g_rbf_to_k_lam0.1  g_k_to_rbf_lam0.1  sqrt_ntrain
+kernel                                                                                                                                                                            
+amplitude/fidelity          0.288       0.838                6.009              104.487               4.412              33.273              2.956             11.016       19.619
+angle/fidelity              0.370       0.994                1.509                9.444               1.423               4.231              1.303              1.986       19.619
+angle/projected             0.343       0.982                3.073                2.220               2.241               1.933              1.869              1.674       19.619
+classical/linear            0.302         NaN                  NaN                  NaN                 NaN                 NaN                NaN                NaN       19.619
+classical/poly2_normalised  0.282         NaN                  NaN                  NaN                 NaN                 NaN                NaN                NaN       19.619
+classical/rbf               0.346         NaN                  NaN                  NaN                 NaN                 NaN                NaN                NaN       19.619
+classical/rbf_scale         0.381         NaN                  NaN                  NaN                 NaN                 NaN                NaN                NaN       19.619
+iqp/fidelity                0.349       0.913                2.486                7.369               2.396               4.022              2.176              3.076       19.619
+iqp/projected               0.351       0.914                3.704                7.813               3.158               5.744              2.291              3.606       19.619
+zz/fidelity                 0.288       0.787                7.375                5.387               5.329               3.894              3.938              2.760       19.619
+zz/projected                0.264       0.699                8.668                9.959               5.338               6.312              3.781              4.003       19.619
+
+5. CEILING SENSITIVITY: pooled difference to tuned RBF without datasets where it reaches >= 0.99 (excluded: banknote, circles, digits17, digits49)
+            kernel  n_datasets    mean      lo      hi  equivalent_95ci
+    angle/fidelity          12  0.0016 -0.0067  0.0100             True
+   angle/projected          12  0.0034 -0.0063  0.0130             True
+      iqp/fidelity          12  0.0000 -0.0069  0.0070             True
+     iqp/projected          12 -0.0021 -0.0099  0.0057             True
+       zz/fidelity          12 -0.0035 -0.0127  0.0058             True
+      zz/projected          12 -0.0055 -0.0129  0.0019             True
+amplitude/fidelity          12 -0.0485 -0.0615 -0.0355            False
+
+4. REDUCTION BEFORE LOADING, POOLED OVER DATASETS (post hoc; primary analysis is per configuration)
+delta_acc = reduced minus unreduced amplitude kernel; non-inferior if lo > -0.02
+                                       setting         scope  n_datasets                                                 datasets    mean      lo      hi  noninferior  lower  median_gate_saving
+ no dimension reduction, kmeans 0.25 of points  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.0241 -0.0365 -0.0116        False   True             10.4361
+ no dimension reduction, kmeans 0.25 of points real datasets           3                              breast_cancer wine digits38 -0.0134 -0.0246 -0.0023        False   True             10.4182
+  no dimension reduction, kmeans 0.5 of points  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.0110 -0.0196 -0.0023         True   True              3.3914
+  no dimension reduction, kmeans 0.5 of points real datasets           3                              breast_cancer wine digits38 -0.0056 -0.0145  0.0033         True  False              3.3967
+no dimension reduction, uniform 0.25 of points  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.0369 -0.0504 -0.0234        False   True             10.4361
+no dimension reduction, uniform 0.25 of points real datasets           3                              breast_cancer wine digits38 -0.0277 -0.0455 -0.0100        False   True             10.4182
+ no dimension reduction, uniform 0.5 of points  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.0128 -0.0228 -0.0027        False   True              3.3914
+ no dimension reduction, uniform 0.5 of points real datasets           3                              breast_cancer wine digits38 -0.0136 -0.0271 -0.0000        False   True              3.3967
+                                      pca k=16  all datasets           5      breast_cancer digits38 synth_r16 synth_r4 synth_r64 -0.0276 -0.0418 -0.0134        False   True              5.1818
+                                      pca k=16 real datasets           2                                   breast_cancer digits38 -0.0120 -0.0286  0.0047        False  False              3.7727
+                                      pca k=32  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0342 -0.0486 -0.0198        False   True              2.1923
+               pca k=32, kmeans 0.25 of points  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0627 -0.0813 -0.0440        False   True             22.9185
+                pca k=32, kmeans 0.5 of points  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0441 -0.0599 -0.0282        False   True              7.4351
+              pca k=32, uniform 0.25 of points  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0712 -0.0901 -0.0523        False   True             22.9185
+               pca k=32, uniform 0.5 of points  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0481 -0.0606 -0.0355        False   True              7.4351
+                                       pca k=4  all datasets           2                                       breast_cancer wine -0.0346 -0.0668 -0.0024        False   True             18.5000
+                                       pca k=4 real datasets           2                                       breast_cancer wine -0.0346 -0.0668 -0.0024        False   True             18.5000
+                                       pca k=8  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.0340 -0.0506 -0.0173        False   True             14.2500
+                                       pca k=8 real datasets           3                              breast_cancer wine digits38 -0.0120 -0.0311  0.0071        False  False              6.5000
+                                 randproj k=16  all datasets           5      breast_cancer digits38 synth_r16 synth_r4 synth_r64 -0.1239 -0.1490 -0.0989        False   True              5.1818
+                                 randproj k=16 real datasets           2                                   breast_cancer digits38 -0.0329 -0.0556 -0.0101        False   True              3.7727
+                                 randproj k=32  all datasets           4                    digits38 synth_r16 synth_r4 synth_r64 -0.0750 -0.0973 -0.0527        False   True              2.1923
+                                  randproj k=4  all datasets           2                                       breast_cancer wine -0.1601 -0.2291 -0.0911        False   True             18.5000
+                                  randproj k=4 real datasets           2                                       breast_cancer wine -0.1601 -0.2291 -0.0911        False   True             18.5000
+                                  randproj k=8  all datasets           6 breast_cancer digits38 synth_r16 synth_r4 synth_r64 wine -0.1679 -0.1952 -0.1406        False   True             14.2500
+                                  randproj k=8 real datasets           3                              breast_cancer wine digits38 -0.0782 -0.1096 -0.0468        False   True              6.5000
+

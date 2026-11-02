@@ -1,0 +1,17 @@
+dataset,n_full,n_used,n_features,n_classes,majority_share,status
+moons,500,500,4,2,0.5,used
+circles,500,500,4,2,0.5,used
+breast_cancer,569,500,30,2,0.628,used
+iris,150,150,4,3,0.3333333333333333,used
+wine,178,178,13,3,0.398876404494382,used
+digits38,357,357,64,2,0.5126050420168067,used
+digits17,361,361,64,2,0.5041551246537396,used
+digits49,361,361,64,2,0.5013850415512465,used
+ionosphere,351,351,34,2,0.6410256410256411,used
+sonar,208,208,60,2,0.5336538461538461,used
+banknote,1372,500,4,2,0.556,used
+pima,768,500,8,2,0.652,used
+blood,748,500,4,2,0.762,used
+haberman,306,306,3,2,0.7352941176470589,used
+ilpd,583,500,10,2,0.714,used
+spambase,4601,500,57,2,0.606,used

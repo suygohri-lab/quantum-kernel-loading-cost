@@ -1,0 +1,148 @@
+LABELLING KERNEL (IQP-F on IQP labels, ZZ-F on ZZ labels), pooled over datasets
+reference full_grid: non-inferior if lo > -0.02;  reference tuned_rbf: advantage kept if lo > 0
+labeller  n_qubits     method reference    mean      lo      hi  noninferior  advantage
+     iqp         4  full_grid tuned_rbf  0.0731  0.0574  0.0887         True       True
+     iqp         4 metric_map full_grid -0.3336 -0.3696 -0.2976        False      False
+     iqp         4 metric_map tuned_rbf -0.2605 -0.2976 -0.2235        False      False
+     iqp         4    rbf_map full_grid -0.3354 -0.3715 -0.2994        False      False
+     iqp         4    rbf_map tuned_rbf -0.2624 -0.2994 -0.2253        False      False
+     iqp         4      angle full_grid -0.2739 -0.3007 -0.2471        False      False
+     iqp         4      angle tuned_rbf -0.2008 -0.2257 -0.1759        False      False
+     iqp         6  full_grid tuned_rbf  0.2001  0.1750  0.2251         True       True
+     iqp         6 metric_map full_grid -0.2760 -0.3225 -0.2295        False      False
+     iqp         6 metric_map tuned_rbf -0.0759 -0.1255 -0.0264        False      False
+     iqp         6    rbf_map full_grid -0.2776 -0.3237 -0.2315        False      False
+     iqp         6    rbf_map tuned_rbf -0.0775 -0.1270 -0.0280        False      False
+     iqp         6      angle full_grid -0.2625 -0.2917 -0.2334        False      False
+     iqp         6      angle tuned_rbf -0.0625 -0.1001 -0.0249        False      False
+     iqp         8  full_grid tuned_rbf  0.2088  0.1787  0.2388         True       True
+     iqp         8 metric_map full_grid -0.2633 -0.2982 -0.2284        False      False
+     iqp         8 metric_map tuned_rbf -0.0546 -0.0780 -0.0311        False      False
+     iqp         8    rbf_map full_grid -0.2665 -0.3034 -0.2296        False      False
+     iqp         8    rbf_map tuned_rbf -0.0577 -0.0777 -0.0378        False      False
+     iqp         8      angle full_grid -0.2548 -0.2882 -0.2214        False      False
+     iqp         8      angle tuned_rbf -0.0460 -0.0720 -0.0201        False      False
+      zz         4  full_grid tuned_rbf  0.1651  0.1299  0.2003         True       True
+      zz         4 metric_map full_grid -0.1979 -0.2334 -0.1624        False      False
+      zz         4 metric_map tuned_rbf -0.0327 -0.0628 -0.0027        False      False
+      zz         4    rbf_map full_grid -0.3417 -0.3812 -0.3022        False      False
+      zz         4    rbf_map tuned_rbf -0.1765 -0.2175 -0.1356        False      False
+      zz         4      angle full_grid -0.3116 -0.3580 -0.2652        False      False
+      zz         4      angle tuned_rbf -0.1465 -0.1975 -0.0955        False      False
+      zz         6  full_grid tuned_rbf  0.1777  0.1373  0.2181         True       True
+      zz         6 metric_map full_grid -0.1569 -0.1950 -0.1187        False      False
+      zz         6 metric_map tuned_rbf  0.0208 -0.0108  0.0525         True      False
+      zz         6    rbf_map full_grid -0.2221 -0.2675 -0.1768        False      False
+      zz         6    rbf_map tuned_rbf -0.0444 -0.0796 -0.0092        False      False
+      zz         6      angle full_grid -0.2264 -0.2583 -0.1945        False      False
+      zz         6      angle tuned_rbf -0.0487 -0.0805 -0.0168        False      False
+      zz         8  full_grid tuned_rbf  0.1020  0.0721  0.1320         True       True
+      zz         8 metric_map full_grid -0.1019 -0.1386 -0.0651        False      False
+      zz         8 metric_map tuned_rbf  0.0002 -0.0194  0.0198         True      False
+      zz         8    rbf_map full_grid -0.1434 -0.1841 -0.1028        False      False
+      zz         8    rbf_map tuned_rbf -0.0414 -0.0717 -0.0110        False      False
+      zz         8      angle full_grid -0.1469 -0.1879 -0.1059        False      False
+      zz         8      angle tuned_rbf -0.0449 -0.0731 -0.0167        False      False
+
+ALL IQP / ZZ KERNELS AGAINST FULL-GRID TUNING
+labeller  n_qubits        kernel     method    mean      lo      hi  noninferior
+     iqp         4  iqp/fidelity metric_map -0.3336 -0.3696 -0.2976        False
+     iqp         4  iqp/fidelity    rbf_map -0.3354 -0.3715 -0.2994        False
+     iqp         4  iqp/fidelity      angle -0.2739 -0.3007 -0.2471        False
+     iqp         4 iqp/projected metric_map -0.3279 -0.3588 -0.2970        False
+     iqp         4 iqp/projected    rbf_map -0.3308 -0.3609 -0.3007        False
+     iqp         4 iqp/projected      angle -0.2215 -0.2599 -0.1830        False
+     iqp         4   zz/fidelity metric_map -0.0352 -0.0588 -0.0116        False
+     iqp         4   zz/fidelity    rbf_map -0.3253 -0.3687 -0.2818        False
+     iqp         4   zz/fidelity      angle -0.2426 -0.2814 -0.2038        False
+     iqp         4  zz/projected metric_map -0.0980 -0.1275 -0.0685        False
+     iqp         4  zz/projected    rbf_map -0.3370 -0.3728 -0.3012        False
+     iqp         4  zz/projected      angle -0.2884 -0.3230 -0.2537        False
+     iqp         6  iqp/fidelity metric_map -0.2760 -0.3225 -0.2295        False
+     iqp         6  iqp/fidelity    rbf_map -0.2776 -0.3237 -0.2315        False
+     iqp         6  iqp/fidelity      angle -0.2625 -0.2917 -0.2334        False
+     iqp         6 iqp/projected metric_map -0.1458 -0.1837 -0.1079        False
+     iqp         6 iqp/projected    rbf_map -0.1464 -0.1867 -0.1062        False
+     iqp         6 iqp/projected      angle -0.1231 -0.1676 -0.0786        False
+     iqp         6   zz/fidelity metric_map -0.0679 -0.1051 -0.0307        False
+     iqp         6   zz/fidelity    rbf_map -0.1723 -0.2077 -0.1368        False
+     iqp         6   zz/fidelity      angle -0.1605 -0.1969 -0.1240        False
+     iqp         6  zz/projected metric_map -0.0578 -0.1001 -0.0156        False
+     iqp         6  zz/projected    rbf_map -0.1618 -0.2008 -0.1228        False
+     iqp         6  zz/projected      angle -0.1439 -0.1861 -0.1017        False
+     iqp         8  iqp/fidelity metric_map -0.2633 -0.2982 -0.2284        False
+     iqp         8  iqp/fidelity    rbf_map -0.2665 -0.3034 -0.2296        False
+     iqp         8  iqp/fidelity      angle -0.2548 -0.2882 -0.2214        False
+     iqp         8 iqp/projected metric_map -0.0924 -0.1294 -0.0555        False
+     iqp         8 iqp/projected    rbf_map -0.0947 -0.1330 -0.0564        False
+     iqp         8 iqp/projected      angle -0.0924 -0.1251 -0.0596        False
+     iqp         8   zz/fidelity metric_map -0.0489 -0.0777 -0.0202        False
+     iqp         8   zz/fidelity    rbf_map -0.1453 -0.1774 -0.1132        False
+     iqp         8   zz/fidelity      angle -0.1448 -0.1755 -0.1140        False
+     iqp         8  zz/projected metric_map -0.0223 -0.0596  0.0150        False
+     iqp         8  zz/projected    rbf_map -0.0959 -0.1294 -0.0624        False
+     iqp         8  zz/projected      angle -0.0943 -0.1321 -0.0565        False
+      zz         4  iqp/fidelity metric_map -0.1271 -0.1520 -0.1022        False
+      zz         4  iqp/fidelity    rbf_map -0.1310 -0.1543 -0.1078        False
+      zz         4  iqp/fidelity      angle -0.1100 -0.1444 -0.0756        False
+      zz         4 iqp/projected metric_map -0.1337 -0.1715 -0.0959        False
+      zz         4 iqp/projected    rbf_map -0.1307 -0.1671 -0.0942        False
+      zz         4 iqp/projected      angle -0.0999 -0.1354 -0.0644        False
+      zz         4   zz/fidelity metric_map -0.1979 -0.2334 -0.1624        False
+      zz         4   zz/fidelity    rbf_map -0.3417 -0.3812 -0.3022        False
+      zz         4   zz/fidelity      angle -0.3116 -0.3580 -0.2652        False
+      zz         4  zz/projected metric_map -0.0720 -0.1124 -0.0315        False
+      zz         4  zz/projected    rbf_map -0.2065 -0.2392 -0.1737        False
+      zz         4  zz/projected      angle -0.1795 -0.2178 -0.1413        False
+      zz         6  iqp/fidelity metric_map -0.0683 -0.0990 -0.0375        False
+      zz         6  iqp/fidelity    rbf_map -0.0687 -0.0980 -0.0395        False
+      zz         6  iqp/fidelity      angle -0.0602 -0.0876 -0.0328        False
+      zz         6 iqp/projected metric_map -0.0647 -0.0964 -0.0331        False
+      zz         6 iqp/projected    rbf_map -0.0639 -0.0954 -0.0323        False
+      zz         6 iqp/projected      angle -0.0595 -0.0872 -0.0317        False
+      zz         6   zz/fidelity metric_map -0.1569 -0.1950 -0.1187        False
+      zz         6   zz/fidelity    rbf_map -0.2221 -0.2675 -0.1768        False
+      zz         6   zz/fidelity      angle -0.2264 -0.2583 -0.1945        False
+      zz         6  zz/projected metric_map -0.0112 -0.0442  0.0218        False
+      zz         6  zz/projected    rbf_map -0.0678 -0.1031 -0.0325        False
+      zz         6  zz/projected      angle -0.0611 -0.0896 -0.0327        False
+      zz         8  iqp/fidelity metric_map -0.0497 -0.0858 -0.0137        False
+      zz         8  iqp/fidelity    rbf_map -0.0490 -0.0851 -0.0129        False
+      zz         8  iqp/fidelity      angle -0.0353 -0.0699 -0.0007        False
+      zz         8 iqp/projected metric_map -0.0583 -0.0935 -0.0232        False
+      zz         8 iqp/projected    rbf_map -0.0583 -0.0931 -0.0235        False
+      zz         8 iqp/projected      angle -0.0523 -0.0933 -0.0113        False
+      zz         8   zz/fidelity metric_map -0.1019 -0.1386 -0.0651        False
+      zz         8   zz/fidelity    rbf_map -0.1434 -0.1841 -0.1028        False
+      zz         8   zz/fidelity      angle -0.1469 -0.1879 -0.1059        False
+      zz         8  zz/projected metric_map -0.0274 -0.0646  0.0099        False
+      zz         8  zz/projected    rbf_map -0.0656 -0.0926 -0.0387        False
+      zz         8  zz/projected      angle -0.0652 -0.0994 -0.0310        False
+
+MEDIAN BANDWIDTH (full grid and surrogates)
+                                 full_grid  angle  metric_map  rbf_map
+labeller n_qubits kernel                                              
+iqp      4        iqp/fidelity        1.00    2.0       4.000      4.0
+                  iqp/projected       0.50    2.0       4.000      4.0
+                  zz/fidelity         0.25    2.0       0.329      4.0
+                  zz/projected        0.10    2.0       0.329      4.0
+         6        iqp/fidelity        1.00    2.0       4.000      4.0
+                  iqp/projected       1.00    2.0       4.000      4.0
+                  zz/fidelity         0.25    2.0       0.215      4.0
+                  zz/projected        0.10    2.0       0.215      4.0
+         8        iqp/fidelity        1.00    4.0       8.000      8.0
+                  iqp/projected       1.00    4.0       8.000      8.0
+                  zz/fidelity         0.25    4.0       0.320      8.0
+                  zz/projected        0.10    4.0       0.320      8.0
+zz       4        iqp/fidelity        1.00    4.0       8.000      8.0
+                  iqp/projected       1.00    4.0       8.000      8.0
+                  zz/fidelity         1.00    4.0       0.659      8.0
+                  zz/projected        1.00    4.0       0.659      8.0
+         6        iqp/fidelity        2.00    8.0       8.000      8.0
+                  iqp/projected       1.00    4.0       8.000      8.0
+                  zz/fidelity         1.00    8.0       0.430      8.0
+                  zz/projected        1.00    4.0       0.430      8.0
+         8        iqp/fidelity        2.00    8.0       8.000      8.0
+                  iqp/projected       2.00    8.0       8.000      8.0
+                  zz/fidelity         1.00    8.0       0.320      8.0
+                  zz/projected        1.00    8.0       0.320      8.0

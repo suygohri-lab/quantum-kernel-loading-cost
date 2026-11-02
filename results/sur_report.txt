@@ -1,0 +1,226 @@
+DATASETS: banknote, blood, breast_cancer, circles, digits17, digits38, digits49, haberman, ilpd, ionosphere, iris, moons, pima, sonar, spambase, wine
+tie rule = middle, grid = [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]
+
+POOLED PAIRED ACCURACY DIFFERENCE (corrected resampled t, 95% CI; non-inferior if lo > -0.02)
+         kernel       method reference    mean      lo      hi  noninferior  equivalent_95ci
+ angle/fidelity    full_grid tuned_rbf  0.0011 -0.0055  0.0078         True             True
+ angle/fidelity   metric_map full_grid -0.0114 -0.0214 -0.0014        False            False
+ angle/fidelity   metric_map tuned_rbf -0.0102 -0.0209  0.0005        False            False
+ angle/fidelity nystrom_0.25 full_grid -0.0001 -0.0014  0.0011         True             True
+ angle/fidelity nystrom_0.25 tuned_rbf  0.0010 -0.0053  0.0073         True             True
+ angle/fidelity  nystrom_0.5 full_grid  0.0000  0.0000  0.0000         True             True
+ angle/fidelity  nystrom_0.5 tuned_rbf  0.0011 -0.0055  0.0078         True             True
+ angle/fidelity      rbf_map full_grid -0.0114 -0.0214 -0.0014        False            False
+ angle/fidelity      rbf_map tuned_rbf -0.0102 -0.0209  0.0005        False            False
+angle/projected    full_grid tuned_rbf  0.0023 -0.0052  0.0099         True             True
+angle/projected   metric_map full_grid -0.0102 -0.0200 -0.0005         True             True
+angle/projected   metric_map tuned_rbf -0.0079 -0.0191  0.0033         True             True
+angle/projected      rbf_map full_grid -0.0102 -0.0200 -0.0005         True             True
+angle/projected      rbf_map tuned_rbf -0.0079 -0.0191  0.0033         True             True
+   iqp/fidelity        angle full_grid -0.0299 -0.0428 -0.0169        False            False
+   iqp/fidelity        angle tuned_rbf -0.0300 -0.0426 -0.0175        False            False
+   iqp/fidelity    full_grid tuned_rbf -0.0002 -0.0058  0.0055         True             True
+   iqp/fidelity   metric_map full_grid -0.0646 -0.0797 -0.0494        False            False
+   iqp/fidelity   metric_map tuned_rbf -0.0647 -0.0828 -0.0467        False            False
+   iqp/fidelity nystrom_0.25 full_grid -0.0012 -0.0049  0.0025         True             True
+   iqp/fidelity nystrom_0.25 tuned_rbf -0.0014 -0.0076  0.0049         True             True
+   iqp/fidelity  nystrom_0.5 full_grid -0.0002 -0.0010  0.0006         True             True
+   iqp/fidelity  nystrom_0.5 tuned_rbf -0.0003 -0.0059  0.0052         True             True
+   iqp/fidelity      rbf_map full_grid -0.0646 -0.0797 -0.0494        False            False
+   iqp/fidelity      rbf_map tuned_rbf -0.0647 -0.0828 -0.0467        False            False
+  iqp/projected        angle full_grid -0.0354 -0.0519 -0.0190        False            False
+  iqp/projected        angle tuned_rbf -0.0371 -0.0523 -0.0219        False            False
+  iqp/projected    full_grid tuned_rbf -0.0017 -0.0076  0.0043         True             True
+  iqp/projected   metric_map full_grid -0.0822 -0.1042 -0.0602        False            False
+  iqp/projected   metric_map tuned_rbf -0.0839 -0.1084 -0.0594        False            False
+  iqp/projected      rbf_map full_grid -0.0829 -0.1052 -0.0605        False            False
+  iqp/projected      rbf_map tuned_rbf -0.0845 -0.1094 -0.0597        False            False
+    zz/fidelity        angle full_grid -0.0628 -0.0759 -0.0496        False            False
+    zz/fidelity        angle tuned_rbf -0.0660 -0.0794 -0.0527        False            False
+    zz/fidelity    full_grid tuned_rbf -0.0033 -0.0102  0.0037         True             True
+    zz/fidelity   metric_map full_grid -0.0041 -0.0153  0.0071         True             True
+    zz/fidelity   metric_map tuned_rbf -0.0074 -0.0182  0.0034         True             True
+    zz/fidelity nystrom_0.25 full_grid -0.0010 -0.0037  0.0017         True             True
+    zz/fidelity nystrom_0.25 tuned_rbf -0.0042 -0.0108  0.0023         True             True
+    zz/fidelity  nystrom_0.5 full_grid -0.0005 -0.0017  0.0006         True             True
+    zz/fidelity  nystrom_0.5 tuned_rbf -0.0038 -0.0109  0.0034         True             True
+    zz/fidelity      rbf_map full_grid -0.0926 -0.1067 -0.0786        False            False
+    zz/fidelity      rbf_map tuned_rbf -0.0959 -0.1139 -0.0779        False            False
+   zz/projected        angle full_grid -0.1082 -0.1280 -0.0884        False            False
+   zz/projected        angle tuned_rbf -0.1133 -0.1330 -0.0937        False            False
+   zz/projected    full_grid tuned_rbf -0.0051 -0.0105  0.0003         True             True
+   zz/projected   metric_map full_grid -0.0068 -0.0141  0.0005         True             True
+   zz/projected   metric_map tuned_rbf -0.0119 -0.0210 -0.0028        False            False
+   zz/projected      rbf_map full_grid -0.1408 -0.1567 -0.1250        False            False
+   zz/projected      rbf_map tuned_rbf -0.1459 -0.1626 -0.1293        False            False
+
+POOLED OVER THE DATASETS OUTSIDE THE PILOT (moons, circles, breast_cancer excluded)
+         kernel       method    mean      lo      hi  noninferior
+ angle/fidelity   metric_map -0.0126 -0.0241 -0.0010        False
+ angle/fidelity nystrom_0.25 -0.0002 -0.0018  0.0014         True
+ angle/fidelity  nystrom_0.5  0.0000  0.0000  0.0000         True
+ angle/fidelity      rbf_map -0.0126 -0.0241 -0.0010        False
+angle/projected   metric_map -0.0108 -0.0224  0.0008        False
+angle/projected      rbf_map -0.0108 -0.0224  0.0008        False
+   iqp/fidelity        angle -0.0212 -0.0350 -0.0075        False
+   iqp/fidelity   metric_map -0.0590 -0.0755 -0.0426        False
+   iqp/fidelity nystrom_0.25 -0.0013 -0.0057  0.0030         True
+   iqp/fidelity  nystrom_0.5 -0.0002 -0.0012  0.0008         True
+   iqp/fidelity      rbf_map -0.0590 -0.0755 -0.0426        False
+  iqp/projected        angle -0.0195 -0.0361 -0.0029        False
+  iqp/projected   metric_map -0.0691 -0.0914 -0.0468        False
+  iqp/projected      rbf_map -0.0699 -0.0928 -0.0470        False
+    zz/fidelity        angle -0.0593 -0.0736 -0.0450        False
+    zz/fidelity   metric_map -0.0043 -0.0176  0.0090         True
+    zz/fidelity nystrom_0.25 -0.0011 -0.0045  0.0023         True
+    zz/fidelity  nystrom_0.5 -0.0006 -0.0021  0.0008         True
+    zz/fidelity      rbf_map -0.0912 -0.1063 -0.0760        False
+   zz/projected        angle -0.1017 -0.1264 -0.0769        False
+   zz/projected   metric_map -0.0073 -0.0160  0.0013         True
+   zz/projected      rbf_map -0.1352 -0.1571 -0.1132        False
+
+PER DATASET AGAINST FULL-GRID TUNING: share non-inferior and number significantly worse (upper bound < 0)
+                              datasets  share_noninferior  significantly_worse
+kernel          method                                                        
+angle/fidelity  metric_map          16              0.500                    0
+                nystrom_0.25        16              0.938                    0
+                nystrom_0.5         16              1.000                    0
+                rbf_map             16              0.500                    0
+angle/projected metric_map          16              0.375                    0
+                rbf_map             16              0.375                    0
+iqp/fidelity    angle               16              0.375                    2
+                metric_map          16              0.250                    4
+                nystrom_0.25        16              0.938                    0
+                nystrom_0.5         16              1.000                    0
+                rbf_map             16              0.250                    4
+iqp/projected   angle               16              0.188                    1
+                metric_map          16              0.188                    5
+                rbf_map             16              0.188                    5
+zz/fidelity     angle               16              0.062                    6
+                metric_map          16              0.438                    0
+                nystrom_0.25        16              0.875                    0
+                nystrom_0.5         16              0.938                    0
+                rbf_map             16              0.125                    7
+zz/projected    angle               16              0.125                    9
+                metric_map          16              0.500                    0
+                rbf_map             16              0.062                   10
+
+CIRCUITS (median cell): tuning + final Gram matrix
+         kernel       method  M_train  n_test  grid_size  tuning_circuits  test_circuits  total_circuits  gram_circuits  saving_vs_full_grid  gram_saving
+ angle/fidelity    full_grid    387.5    43.5         12         898612.5        16856.2        915468.8        91740.6                  1.0          1.0
+ angle/fidelity   metric_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+ angle/fidelity nystrom_0.25    387.5    43.5         12         898612.5         4176.0        902788.5        36720.0                  1.0          2.5
+ angle/fidelity  nystrom_0.5    387.5    43.5         12         898612.5         8439.0        907051.5        64699.0                  1.0          1.4
+ angle/fidelity      rbf_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+angle/projected    full_grid    387.5    43.5         12          13950.0          130.5         14080.5         1293.0                  1.0          1.0
+angle/projected   metric_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+angle/projected      rbf_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+   iqp/fidelity        angle    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+   iqp/fidelity    full_grid    387.5    43.5         12         898612.5        16856.2        915468.8        91740.6                  1.0          1.0
+   iqp/fidelity   metric_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+   iqp/fidelity nystrom_0.25    387.5    43.5         12         898612.5         4176.0        902788.5        36720.0                  1.0          2.5
+   iqp/fidelity  nystrom_0.5    387.5    43.5         12         898612.5         8439.0        907051.5        64699.0                  1.0          1.4
+   iqp/fidelity      rbf_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+  iqp/projected        angle    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+  iqp/projected    full_grid    387.5    43.5         12          13950.0          130.5         14080.5         1293.0                  1.0          1.0
+  iqp/projected   metric_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+  iqp/projected      rbf_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+    zz/fidelity        angle    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+    zz/fidelity    full_grid    387.5    43.5         12         898612.5        16856.2        915468.8        91740.6                  1.0          1.0
+    zz/fidelity   metric_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+    zz/fidelity nystrom_0.25    387.5    43.5         12         898612.5         4176.0        902788.5        36720.0                  1.0          2.5
+    zz/fidelity  nystrom_0.5    387.5    43.5         12         898612.5         8439.0        907051.5        64699.0                  1.0          1.4
+    zz/fidelity      rbf_map    387.5    43.5         12          74884.4        16856.2         91740.6        91740.6                 10.0          1.0
+   zz/projected        angle    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+   zz/projected    full_grid    387.5    43.5         12          13950.0          130.5         14080.5         1293.0                  1.0          1.0
+   zz/projected   metric_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+   zz/projected      rbf_map    387.5    43.5         12           1162.5          130.5          1293.0         1293.0                 10.9          1.0
+
+CIRCUITS AT THE REFERENCE SIZE OF THE BILL (M = 100, 50 test points)
+         kernel       method  M_train  n_test  grid_size  tuning_circuits  test_circuits  total_circuits  gram_circuits  saving_vs_full_grid  gram_saving
+ angle/fidelity    full_grid      100      50         12          59400.0           5000         64400.0         9950.0                  1.0          1.0
+ angle/fidelity   metric_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+ angle/fidelity nystrom_0.25      100      50         12          59400.0           1250         60650.0         3425.0                  1.1          2.9
+ angle/fidelity  nystrom_0.5      100      50         12          59400.0           2500         61900.0         6225.0                  1.0          1.6
+ angle/fidelity      rbf_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+angle/projected    full_grid      100      50         12           3600.0            150          3750.0          450.0                  1.0          1.0
+angle/projected   metric_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+angle/projected      rbf_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+   iqp/fidelity        angle      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+   iqp/fidelity    full_grid      100      50         12          59400.0           5000         64400.0         9950.0                  1.0          1.0
+   iqp/fidelity   metric_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+   iqp/fidelity nystrom_0.25      100      50         12          59400.0           1250         60650.0         3425.0                  1.1          2.9
+   iqp/fidelity  nystrom_0.5      100      50         12          59400.0           2500         61900.0         6225.0                  1.0          1.6
+   iqp/fidelity      rbf_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+  iqp/projected        angle      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+  iqp/projected    full_grid      100      50         12           3600.0            150          3750.0          450.0                  1.0          1.0
+  iqp/projected   metric_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+  iqp/projected      rbf_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+    zz/fidelity        angle      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+    zz/fidelity    full_grid      100      50         12          59400.0           5000         64400.0         9950.0                  1.0          1.0
+    zz/fidelity   metric_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+    zz/fidelity nystrom_0.25      100      50         12          59400.0           1250         60650.0         3425.0                  1.1          2.9
+    zz/fidelity  nystrom_0.5      100      50         12          59400.0           2500         61900.0         6225.0                  1.0          1.6
+    zz/fidelity      rbf_map      100      50         12           4950.0           5000          9950.0         9950.0                  6.5          1.0
+   zz/projected        angle      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+   zz/projected    full_grid      100      50         12           3600.0            150          3750.0          450.0                  1.0          1.0
+   zz/projected   metric_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+   zz/projected      rbf_map      100      50         12            300.0            150           450.0          450.0                  8.3          1.0
+
+SMALL-BANDWIDTH METRIC kappa^2 (metric-matched s = s*_RBF / kappa)
+encoding  angle   iqp       zz
+n                             
+2          0.25  0.25   11.444
+3          0.25  0.25   16.558
+4          0.25  0.25   36.848
+5          0.25  0.25   58.851
+6          0.25  0.25   86.530
+7          0.25  0.25  118.952
+8          0.25  0.25  156.270
+9          0.25  0.25  198.442
+10         0.25  0.25  245.483
+11         0.25  0.25  297.401
+12         0.25  0.25  354.208
+
+MEDIAN BANDWIDTH USED
+kernel           method      
+angle/fidelity   full_grid       1.0000
+                 metric_map      1.0000
+                 nystrom_0.25    1.0000
+                 nystrom_0.5     1.0000
+                 rbf_map         1.0000
+angle/projected  full_grid       0.5000
+                 metric_map      1.0000
+                 rbf_map         1.0000
+classical/rbf    full_grid       0.5000
+iqp/fidelity     angle           1.0000
+                 full_grid       0.2500
+                 metric_map      1.0000
+                 nystrom_0.25    0.2500
+                 nystrom_0.5     0.2500
+                 rbf_map         1.0000
+iqp/projected    angle           0.5000
+                 full_grid       0.2500
+                 metric_map      1.0000
+                 rbf_map         1.0000
+zz/fidelity      angle           1.0000
+                 full_grid       0.1000
+                 metric_map      0.0824
+                 nystrom_0.25    0.1000
+                 nystrom_0.5     0.1000
+                 rbf_map         1.0000
+zz/projected     angle           0.5000
+                 full_grid       0.1000
+                 metric_map      0.0824
+                 rbf_map         1.0000
+
+CONSISTENCY WITH mds_cells.csv (full-grid cells)
+                 cells  same_s  mean_acc_here  mean_acc_mds
+kernel                                                     
+angle/fidelity   320.0     1.0         0.8943        0.8943
+angle/projected  320.0     1.0         0.8955        0.8955
+classical/rbf    320.0     1.0         0.8932        0.8932
+iqp/fidelity     320.0     1.0         0.8930        0.8930
+iqp/projected    320.0     1.0         0.8915        0.8915
+zz/fidelity      320.0     1.0         0.8899        0.8899
+zz/projected     320.0     1.0         0.8881        0.8881

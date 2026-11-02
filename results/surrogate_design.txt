@@ -1,0 +1,36 @@
+Surrogate tuning (method) and Nystrom landmarks (lever): two ways to cut the number of loading-circuit executions.
+
+PRE-SPECIFIED DESIGN (fixed on 2026-10-31, before any result of this script was seen; written to surrogate_design.txt)
+Same datasets, cap, resamples, preprocessing (n = 4), bandwidth grid, C grid, inner 3-fold CV and tie rule as the main
+study (multi_dataset_study.py).  Set QK_TIE and QK_S_GRID exactly as for the main run.
+
+Part A - surrogate tuning.  Full-grid tuning builds one quantum Gram matrix per bandwidth (|S| matrices); a surrogate
+chooses the bandwidth from a classical kernel and builds ONE quantum Gram matrix.  C is then tuned by inner CV on that
+single matrix (C costs no circuits).
+  A1 'rbf_map'  : s = 2 * s*_RBF, where s*_RBF is the bandwidth of the tuned RBF kernel exp(-s^2 ||x-x'||^2).  The
+                  factor 2 comes from the small-angle limit cos^2(s d/2) ~ exp(-s^2 d^2 / 4) (Eq. smallangle); the
+                  same rule is used for fidelity and projected kernels.  Value used as is (off-grid allowed).
+  A1m 'metric_map' (added after a pilot on 3 datasets x 3 folds, before the full run; disclosed as such): s =
+                  s*_RBF / kappa_k, where kappa_k^2 = (1/n) sum_q lim (1 - K(x, x + e e_q)) / (s e)^2 is the small-bandwidth
+                  metric of encoding k (data-free, one statevector calculation per encoding and n; it does not depend
+                  on x).  kappa^2 = 1/4 for angle and IQP, so A1m = A1 there; for ZZ kappa^2 is much larger (about 37 at
+                  n = 4) because its pair phases depend linearly on the features.  The pilot showed that A1 sends ZZ
+                  to s ~ 1, where ZZ is known to lose accuracy (fixed-bandwidth control).
+  A2 'angle'    : s = s* of the angle kernel of the same construction (angle fidelity for fidelity kernels, angle
+                  projected for projected kernels), tuned on the full grid through its classical closed form.
+  Quantum kernels evaluated: IQP-F, IQP-P, ZZ-F, ZZ-P (both surrogates) and Angle-F, Angle-P (A1 only; A2 is the
+  identity for angle).
+  Primary endpoint: pooled paired accuracy difference (surrogate - full grid), corrected resampled t, two-sided 95% CI;
+  surrogate is NON-INFERIOR if the lower bound > -0.02.  Secondary: difference to the tuned RBF kernel (TOST +/-0.02),
+  per-dataset results, balanced accuracy and macro-F1, and the bandwidth-search circuits (|S| -> 1).
+  Prediction stated in advance: the surrogates should work better for IQP than for ZZ, because at the tuned bandwidth
+  IQP is close to stationary and ZZ is not (stationarity_study.py).
+
+Part B - Nystrom landmarks (lever, not a method of this paper; Srikumar et al. 2024, Coelho et al. 2025).  For the
+fidelity kernels at the full-grid bandwidth s*, m landmarks are drawn uniformly at random from the training points
+(fixed seed per resample), and K ~ C W^+ C^T.  m = 25% and 50% of the training points.  C is re-tuned by inner CV on the
+approximated training Gram matrix.  Endpoint: paired accuracy difference (Nystrom - exact), non-inferiority at -0.02.
+Circuits per Gram matrix: exact M(M-1)/2 + n_test*M, Nystrom m(m-1)/2 + (M-m)*m + n_test*m.
+
+
+RUN: tie rule = middle, grid = [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0], n_max = 4, 10-fold x 2

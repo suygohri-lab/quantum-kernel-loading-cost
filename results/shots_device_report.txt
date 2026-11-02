@@ -1,0 +1,81 @@
+PART 1 SHOTS: 6 datasets x 10 resamples, N in [100, 1000, 10000]; time 51s
+(loss = ideal accuracy - accuracy with shot-noisy Gram, hyper-parameters fixed from ideal tuning)
+
+         kernel  shots  acc_ideal  acc_shots    loss  gram_rms_err  gram_rel_frob
+ angle/fidelity    100     0.9702     0.9013  0.0689        0.0186         0.0412
+ angle/fidelity   1000     0.9702     0.9449  0.0253        0.0060         0.0132
+ angle/fidelity  10000     0.9702     0.9644  0.0059        0.0020         0.0042
+angle/projected    100     0.9686     0.8979  0.0708        0.0666         0.0953
+angle/projected   1000     0.9686     0.9418  0.0268        0.0143         0.0221
+angle/projected  10000     0.9686     0.9625  0.0061        0.0041         0.0065
+   iqp/fidelity    100     0.9731     0.8779  0.0952        0.0183         0.0338
+   iqp/fidelity   1000     0.9731     0.9341  0.0391        0.0060         0.0109
+   iqp/fidelity  10000     0.9731     0.9663  0.0068        0.0019         0.0035
+  iqp/projected    100     0.9684     0.8703  0.0982        0.0704         0.1076
+  iqp/projected   1000     0.9684     0.9469  0.0216        0.0154         0.0252
+  iqp/projected  10000     0.9684     0.9709 -0.0025        0.0045         0.0075
+    zz/fidelity    100     0.9708     0.8757  0.0951        0.0211         0.0462
+    zz/fidelity   1000     0.9708     0.9349  0.0359        0.0069         0.0149
+    zz/fidelity  10000     0.9708     0.9538  0.0170        0.0023         0.0048
+   zz/projected    100     0.9705     0.7856  0.1848        0.2104         0.3052
+   zz/projected   1000     0.9705     0.9028  0.0677        0.0370         0.0584
+   zz/projected  10000     0.9705     0.9470  0.0234        0.0084         0.0146
+
+PAIRED LOSS DIFFERENCE vs ANGLE (pooled; positive = embedding loses more accuracy than angle)
+ shots      cons           contrast    mean      lo     hi      p
+   100  fidelity iqp - angle (loss)  0.0264 -0.0105 0.0632 0.1399
+   100  fidelity  zz - angle (loss)  0.0262 -0.0235 0.0760 0.2631
+   100 projected iqp - angle (loss)  0.0274 -0.0141 0.0688 0.1691
+   100 projected  zz - angle (loss)  0.1141  0.0669 0.1612 0.0004
+  1000  fidelity iqp - angle (loss)  0.0138 -0.0077 0.0352 0.1802
+  1000  fidelity  zz - angle (loss)  0.0106 -0.0180 0.0393 0.4227
+  1000 projected iqp - angle (loss) -0.0052 -0.0252 0.0148 0.5712
+  1000 projected  zz - angle (loss)  0.0409 -0.0105 0.0922 0.1051
+ 10000  fidelity iqp - angle (loss)  0.0009 -0.0072 0.0091 0.8006
+ 10000  fidelity  zz - angle (loss)  0.0111  0.0026 0.0196 0.0161
+ 10000 projected iqp - angle (loss) -0.0086 -0.0219 0.0046 0.1749
+ 10000 projected  zz - angle (loss)  0.0173 -0.0043 0.0388 0.1028
+
+PART 2 DEVICE REPLAY (stored 2025 calibration snapshots, Aer density matrix, 1000 shots; NOT hardware): 5 datasets x 10 resamples x 3 backends, 40 train / 20 test; time 2148s
+
+BACKEND CALIBRATION SUMMARY
+       backend  n_qubits            snapshot  median_T1_us  median_T2_us  median_readout_err  median_1q_err  median_2q_err two_qubit_gate
+       FakeFez       156 2025-02-26 15:16:25     144.85527      87.95069             0.00757        0.00023        0.00377             cz
+FakeSherbrooke       127 2025-02-26 14:43:10     278.41972     170.01274             0.01978        0.00024        0.00750            ecr
+     FakeCusco       127 2025-02-26 15:35:12     131.17443      80.15090             0.06030        0.00063        0.02168            ecr
+
+       backend          kernel  acc_ideal  acc_shotonly  acc_device  gram_bias  gram_rms_err  gram_rel_frob  twoq_per_circuit  depth  change_mean  change_lo  change_hi  change_shot_mean  change_shot_lo  change_shot_hi  change_noise_mean  change_noise_lo  change_noise_hi
+     FakeCusco  angle/fidelity     0.9269        0.8965      0.6810    -0.3581        0.3939         0.4921               0.0    7.0      -0.2459    -0.2984    -0.1934           -0.0304         -0.0861          0.0253            -0.2155          -0.2857          -0.1453
+     FakeCusco angle/projected     0.9207        0.8976      0.7177     0.0682        0.0975         0.1746               0.0    5.0      -0.2029    -0.3015    -0.1044           -0.0231         -0.0651          0.0189            -0.1798          -0.2553          -0.1044
+     FakeCusco    iqp/fidelity     0.9207        0.8802      0.6320    -0.6526        0.6784         0.8187              86.0  308.0      -0.2887    -0.4068    -0.1707           -0.0405         -0.1207          0.0397            -0.2482          -0.3764          -0.1201
+     FakeCusco   iqp/projected     0.9210        0.8846      0.6802     0.1478        0.1702         0.2977              48.0  174.0      -0.2408    -0.3599    -0.1218           -0.0365         -0.1029          0.0300            -0.2044          -0.2871          -0.1216
+     FakeCusco     zz/fidelity     0.8987        0.8635      0.6749    -0.5315        0.5748         0.8195              86.0  308.0      -0.2238    -0.2740    -0.1736           -0.0352         -0.0863          0.0159            -0.1886          -0.2501          -0.1271
+     FakeCusco    zz/projected     0.9046        0.8845      0.7025     0.2512        0.2917         0.5795              48.0  174.0      -0.2021    -0.3187    -0.0856           -0.0201         -0.0845          0.0443            -0.1820          -0.2855          -0.0786
+       FakeFez  angle/fidelity     0.9269        0.8965      0.8968    -0.0315        0.0356         0.0452               0.0    7.0      -0.0301    -0.0809     0.0207           -0.0304         -0.0861          0.0253             0.0003          -0.0690           0.0696
+       FakeFez angle/projected     0.9207        0.8976      0.8915     0.0008        0.0152         0.0226               0.0    5.0      -0.0292    -0.0943     0.0360           -0.0231         -0.0651          0.0189            -0.0060          -0.0369           0.0248
+       FakeFez    iqp/fidelity     0.9207        0.8802      0.8166    -0.3089        0.3221         0.3910              86.0  255.0      -0.1041    -0.2472     0.0391           -0.0405         -0.1207          0.0397            -0.0636          -0.2040           0.0769
+       FakeFez   iqp/projected     0.9210        0.8846      0.8827     0.0440        0.0544         0.0914              48.0  137.0      -0.0384    -0.1173     0.0405           -0.0365         -0.1029          0.0300            -0.0019          -0.0609           0.0570
+       FakeFez     zz/fidelity     0.8987        0.8635      0.8587    -0.2621        0.2842         0.4070              86.0  255.0      -0.0400    -0.0820     0.0019           -0.0352         -0.0863          0.0159            -0.0048          -0.0491           0.0395
+       FakeFez    zz/projected     0.9046        0.8845      0.8679     0.0650        0.0905         0.1723              48.0  137.0      -0.0366    -0.1037     0.0304           -0.0201         -0.0845          0.0443            -0.0165          -0.0693           0.0362
+FakeSherbrooke  angle/fidelity     0.9269        0.8965      0.8868    -0.0485        0.0532         0.0667               0.0    7.0      -0.0401    -0.1046     0.0244           -0.0304         -0.0861          0.0253            -0.0097          -0.0929           0.0735
+FakeSherbrooke angle/projected     0.9207        0.8976      0.8885     0.0039        0.0171         0.0267               0.0    5.0      -0.0322    -0.0959     0.0316           -0.0231         -0.0651          0.0189            -0.0090          -0.0426           0.0245
+FakeSherbrooke    iqp/fidelity     0.9207        0.8802      0.8022    -0.4103        0.4276         0.5186              86.0  319.0      -0.1185    -0.2775     0.0406           -0.0405         -0.1207          0.0397            -0.0780          -0.2395           0.0835
+FakeSherbrooke   iqp/projected     0.9210        0.8846      0.8868     0.0655        0.0773         0.1317              48.0  181.0      -0.0342    -0.1323     0.0638           -0.0365         -0.1029          0.0300             0.0022          -0.0609           0.0653
+FakeSherbrooke     zz/fidelity     0.8987        0.8635      0.8376    -0.3468        0.3758         0.5378              86.0  319.0      -0.0611    -0.1134    -0.0089           -0.0352         -0.0863          0.0159            -0.0259          -0.0693           0.0175
+FakeSherbrooke    zz/projected     0.9046        0.8845      0.8509     0.1009        0.1273         0.2461              48.0  181.0      -0.0537    -0.1450     0.0376           -0.0201         -0.0845          0.0443            -0.0336          -0.0991           0.0319
+
+PAIRED LOSS DIFFERENCE vs ANGLE (pooled; loss = ideal - device accuracy)
+       backend      cons           contrast    mean      lo     hi      p
+     FakeCusco  fidelity iqp - angle (loss)  0.0428 -0.1038 0.1895 0.5253
+     FakeCusco  fidelity  zz - angle (loss) -0.0221 -0.1034 0.0592 0.5538
+     FakeCusco projected iqp - angle (loss)  0.0379 -0.0471 0.1228 0.3395
+     FakeCusco projected  zz - angle (loss) -0.0008 -0.1015 0.0999 0.9856
+       FakeFez  fidelity iqp - angle (loss)  0.0739 -0.0800 0.2279 0.3055
+       FakeFez  fidelity  zz - angle (loss)  0.0099 -0.0501 0.0699 0.7173
+       FakeFez projected iqp - angle (loss)  0.0092 -0.0367 0.0551 0.6603
+       FakeFez projected  zz - angle (loss)  0.0075 -0.0638 0.0788 0.8176
+FakeSherbrooke  fidelity iqp - angle (loss)  0.0783 -0.0921 0.2488 0.3256
+FakeSherbrooke  fidelity  zz - angle (loss)  0.0210 -0.0551 0.0972 0.5478
+FakeSherbrooke projected iqp - angle (loss)  0.0021 -0.0673 0.0715 0.9475
+FakeSherbrooke projected  zz - angle (loss)  0.0215 -0.0866 0.1297 0.6632
+

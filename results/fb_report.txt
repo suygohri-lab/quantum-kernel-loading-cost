@@ -1,0 +1,37 @@
+FIXED-BANDWIDTH REFERENCE (s = 1, only C tuned): 16 datasets, 320 splits, time 62s
+
+MEAN TEST ACCURACY, fixed vs tuned (mean over all splits) and POOLED GAIN (tuned - fixed), accuracy
+         kernel  fixed_mean  tuned_mean    mean      lo     hi      p
+ angle/fidelity      0.8959      0.8943 -0.0016 -0.0050 0.0018 0.3461
+angle/projected      0.8965      0.8955 -0.0010 -0.0071 0.0052 0.7379
+   iqp/fidelity      0.8775      0.8930  0.0155  0.0076 0.0234 0.0006
+  iqp/projected      0.8532      0.8915  0.0384  0.0249 0.0518 0.0000
+    zz/fidelity      0.7921      0.8899  0.0978  0.0870 0.1085 0.0000
+   zz/projected      0.7121      0.8881  0.1759  0.1591 0.1927 0.0000
+
+FIXED-BANDWIDTH KERNEL MINUS TUNED RBF (pooled, accuracy)
+                                 kernel    mean      lo      hi      p  equivalent_95ci
+ angle/fidelity [fixed s=1] - tuned RBF  0.0027 -0.0039  0.0093 0.3961             True
+angle/projected [fixed s=1] - tuned RBF  0.0033 -0.0040  0.0106 0.3551             True
+   iqp/fidelity [fixed s=1] - tuned RBF -0.0157 -0.0250 -0.0063 0.0023            False
+  iqp/projected [fixed s=1] - tuned RBF -0.0400 -0.0537 -0.0263 0.0000            False
+    zz/fidelity [fixed s=1] - tuned RBF -0.1010 -0.1146 -0.0875 0.0000            False
+   zz/projected [fixed s=1] - tuned RBF -0.1810 -0.1962 -0.1658 0.0000            False
+
+OFF-DIAGONAL OF THE FIDELITY GRAM AT s = 1 (training block)
+ n  kind  offdiag_mean  offdiag_sd   haar  cells
+ 4 angle        0.5975      0.2465 0.0588     24
+ 4   iqp        0.2303      0.2081 0.0588     24
+ 4    zz        0.0930      0.1051 0.0588     24
+ 6 angle        0.5281      0.2431 0.0154     24
+ 6   iqp        0.0953      0.1122 0.0154     24
+ 6    zz        0.0258      0.0400 0.0154     24
+ 8 angle        0.4733      0.2345 0.0039     24
+ 8   iqp        0.0488      0.0672 0.0039     24
+ 8    zz        0.0081      0.0182 0.0039     24
+10 angle        0.4319      0.2272 0.0010     24
+10   iqp        0.0274      0.0438 0.0010     24
+10    zz        0.0033      0.0114 0.0010     24
+12 angle        0.3880      0.2183 0.0002     24
+12   iqp        0.0152      0.0284 0.0002     24
+12    zz        0.0017      0.0082 0.0002     24

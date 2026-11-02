@@ -1,0 +1,7 @@
+kernel,datasets,equivalent,lower,higher,not_shown_equivalent
+angle/fidelity,16,9,0,0,7
+angle/projected,16,6,0,0,10
+iqp/fidelity,16,7,0,0,9
+iqp/projected,16,6,0,1,10
+zz/fidelity,16,5,0,0,11
+zz/projected,16,5,0,0,11

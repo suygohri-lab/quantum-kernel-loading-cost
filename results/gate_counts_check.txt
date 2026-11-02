@@ -1,0 +1,1 @@
+Analytic check (state circuit, all-to-all, opt 1: IQP/ZZ = L*n*(n-1), angle = 0): passed

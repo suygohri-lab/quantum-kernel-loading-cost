@@ -1,0 +1,32 @@
+Numerical rank (eigenvalues > 1e-10 x max) and effective dimension of fidelity Gram matrices, 1000 uniform points
+n                        4       5       6       7       8
+kernel         s                                          
+angle/fidelity 0.10   32.0    56.0    93.0   148.0   224.0
+               0.25   66.0   147.0   294.0   496.0   750.0
+               1.00   81.0   243.0   728.0  1000.0  1000.0
+iqp/fidelity   0.10   58.0   127.0   238.0   397.0   618.0
+               0.25  197.0   528.0   940.0  1000.0  1000.0
+               1.00  256.0  1000.0  1000.0  1000.0  1000.0
+zz/fidelity    0.10  256.0  1000.0  1000.0  1000.0  1000.0
+               0.25  256.0  1000.0  1000.0  1000.0  1000.0
+               1.00  256.0  1000.0  1000.0  1000.0  1000.0
+
+Effective dimension
+n                       4      5      6      7      8
+kernel         s                                     
+angle/fidelity 0.10   1.0    1.0    1.1    1.1    1.1
+               0.25   1.2    1.3    1.4    1.4    1.5
+               1.00   8.7   15.5   26.4   43.1   76.2
+iqp/fidelity   0.10   1.0    1.0    1.1    1.1    1.1
+               0.25   1.4    1.7    2.1    2.5    3.3
+               1.00  60.1  194.4  436.7  699.0  858.4
+zz/fidelity    0.10   6.6   25.5   57.3  180.9  310.7
+               0.25  52.0  211.5  363.5  789.2  840.5
+               1.00  88.9  280.0  602.4  843.6  947.7
+
+MAIN-STUDY TRAINING BLOCKS (first resample): rank and effective dimension at the tuned s and at s = 1
+                n_train  s_star   rank  eff_dim  rank_s1  eff_dim_s1
+kernel                                                              
+angle/fidelity    387.0     0.5   64.5      1.4     79.5         2.8
+iqp/fidelity      387.0     0.2   89.5      1.2    256.0        12.9
+zz/fidelity       387.0     0.1  190.0      3.2    256.0        48.6

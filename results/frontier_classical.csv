@@ -1,0 +1,4 @@
+kernel,accuracy,classical_ops,ops_per_entry
+RBF (tuned),0.8931647634860396,129350,13
+Linear,0.8512305734085264,79600,8
+Angle-F closed form (classical),0.8943086804614319,159200,16

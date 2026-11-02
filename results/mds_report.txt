@@ -1,0 +1,116 @@
+DATASETS USED: banknote, blood, breast_cancer, circles, digits17, digits38, digits49, haberman, ilpd, ionosphere, iris, moons, pima, sonar, spambase, wine
+SKIPPED: none
+DESIGN: cap 500, repeated stratified 10-fold x 2 = 20 resamples, n_test/n_train = 0.111
+TUNING: tie rule = middle, bandwidth grid s = [0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0]
+
+MEAN TEST ACCURACY PER KERNEL (mean of dataset means)
+kernel
+classical/rbf_scale           0.8962
+angle/projected               0.8955
+angle/fidelity                0.8943
+classical/rbf                 0.8932
+iqp/fidelity                  0.8930
+iqp/projected                 0.8915
+zz/fidelity                   0.8899
+classical/knn                 0.8897
+zz/projected                  0.8881
+classical/rf                  0.8873
+classical/mlp                 0.8853
+classical/gbm                 0.8843
+classical/linear              0.8512
+classical/poly2_normalised    0.8464
+amplitude/fidelity            0.8454
+
+FRIEDMAN across 16 datasets, 14 models: chi2 = 58.66, p = 9.118e-08
+Average ranks (1 = best):
+kernel
+angle/projected                4.44
+angle/fidelity                 5.31
+iqp/fidelity                   5.38
+classical/rbf                  5.56
+iqp/projected                  5.59
+classical/knn                  6.97
+zz/fidelity                    7.28
+classical/linear               7.41
+zz/projected                   7.81
+classical/mlp                  8.25
+classical/rf                   8.66
+classical/gbm                  9.50
+classical/poly2_normalised    11.38
+amplitude/fidelity            11.47
+
+Holm-adjusted Wilcoxon vs tuned RBF:
+  classical/poly2_normalised: 0.0075
+  amplitude/fidelity: 0.0161
+  classical/gbm: 0.1910
+  classical/rf: 0.2663
+  zz/projected: 0.3201
+  zz/fidelity: 0.5935
+  classical/mlp: 0.5935
+  angle/projected: 0.5935
+  classical/linear: 0.5935
+  classical/knn: 0.5935
+  angle/fidelity: 1.0000
+  iqp/projected: 1.0000
+  iqp/fidelity: 1.0000
+
+POOLED PAIRED DIFFERENCE VS TUNED RBF (corrected resampled t; equivalence margin 0.02)
+                    kernel    mean      lo      hi      p  tost_p  equivalent_95ci
+        amplitude/fidelity -0.0478 -0.0576 -0.0379 0.0000  1.0000            False
+            angle/fidelity  0.0011 -0.0055  0.0078 0.7233  0.0000             True
+           angle/projected  0.0023 -0.0052  0.0099 0.5308  0.0000             True
+             classical/gbm -0.0088 -0.0171 -0.0006 0.0374  0.0053             True
+             classical/knn -0.0035 -0.0136  0.0066 0.4771  0.0015             True
+          classical/linear -0.0419 -0.0504 -0.0335 0.0000  1.0000            False
+             classical/mlp -0.0078 -0.0177  0.0020 0.1129  0.0092             True
+classical/poly2_normalised -0.0468 -0.0580 -0.0355 0.0000  1.0000            False
+       classical/rbf_scale  0.0031 -0.0047  0.0108 0.4176  0.0001             True
+              classical/rf -0.0059 -0.0133  0.0015 0.1129  0.0004             True
+              iqp/fidelity -0.0002 -0.0058  0.0055 0.9513  0.0000             True
+             iqp/projected -0.0017 -0.0076  0.0043 0.5672  0.0000             True
+               zz/fidelity -0.0033 -0.0102  0.0037 0.3403  0.0000             True
+              zz/projected -0.0051 -0.0105  0.0003 0.0621  0.0000             True
+
+POOLED PAIRED DIFFERENCE VS TUNED RBF, BALANCED ACCURACY AND MACRO-F1
+   metric                     kernel    mean      lo      hi  equivalent_95ci
+test_bacc         amplitude/fidelity -0.0581 -0.0687 -0.0475            False
+test_bacc             angle/fidelity -0.0012 -0.0083  0.0059             True
+test_bacc            angle/projected -0.0000 -0.0099  0.0098             True
+test_bacc              classical/gbm -0.0068 -0.0164  0.0027             True
+test_bacc              classical/knn  0.0024 -0.0087  0.0135             True
+test_bacc           classical/linear -0.0529 -0.0629 -0.0429            False
+test_bacc              classical/mlp -0.0134 -0.0266 -0.0003            False
+test_bacc classical/poly2_normalised -0.0554 -0.0685 -0.0423            False
+test_bacc        classical/rbf_scale  0.0010 -0.0081  0.0101             True
+test_bacc               classical/rf -0.0028 -0.0120  0.0064             True
+test_bacc               iqp/fidelity -0.0028 -0.0097  0.0041             True
+test_bacc              iqp/projected -0.0056 -0.0145  0.0032             True
+test_bacc                zz/fidelity -0.0066 -0.0146  0.0015             True
+test_bacc               zz/projected -0.0092 -0.0156 -0.0028             True
+  test_f1         amplitude/fidelity -0.0647 -0.0790 -0.0504            False
+  test_f1             angle/fidelity -0.0043 -0.0128  0.0043             True
+  test_f1            angle/projected -0.0025 -0.0145  0.0096             True
+  test_f1              classical/gbm -0.0060 -0.0168  0.0047             True
+  test_f1              classical/knn  0.0063 -0.0067  0.0193             True
+  test_f1           classical/linear -0.0641 -0.0764 -0.0518            False
+  test_f1              classical/mlp -0.0165 -0.0329 -0.0001            False
+  test_f1 classical/poly2_normalised -0.0612 -0.0775 -0.0449            False
+  test_f1        classical/rbf_scale -0.0022 -0.0128  0.0085             True
+  test_f1               classical/rf -0.0025 -0.0134  0.0085             True
+  test_f1               iqp/fidelity -0.0052 -0.0142  0.0038             True
+  test_f1              iqp/projected -0.0085 -0.0202  0.0032            False
+  test_f1                zz/fidelity -0.0087 -0.0178  0.0004             True
+  test_f1               zz/projected -0.0120 -0.0200 -0.0039             True
+
+GRID EDGES (wide grid 0.002 ... 2)
+                            at_lower_edge  at_upper_edge  median_s
+kernel                                                            
+amplitude/fidelity                  0.000          0.000       NaN
+angle/fidelity                      0.000          0.034      1.00
+angle/projected                     0.000          0.047      0.50
+classical/poly2_normalised          0.053          0.131      0.50
+classical/rbf                       0.000          0.025      0.50
+iqp/fidelity                        0.000          0.000      0.25
+iqp/projected                       0.000          0.012      0.25
+zz/fidelity                         0.000          0.003      0.10
+zz/projected                        0.003          0.003      0.10

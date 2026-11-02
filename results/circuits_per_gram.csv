@@ -1,0 +1,3 @@
+construction,circuits_train,circuits_test,circuits_total,note,M_train,n_test
+fidelity,4950,5000,9950,one compute-uncompute circuit per kernel entry,100,50
+projected,300,150,450,"one state-preparation circuit per point, measured in X, Y and Z bases (3 settings)",100,50

@@ -1,0 +1,31 @@
+Estimated c = sigma^2 * n_test = 0.015  (from angle/fidelity - classical/rbf, n_test = 50)
+
+   N      design  n_train  n_test   R  half_width  meets_delta
+ 150   70/30 x20      105      45  20      0.0260        False
+ 150   80/20 x20      120      30  20      0.0252        False
+ 150   90/10 x20      135      15  20      0.0262        False
+ 150  90/10 x100      135      15 100      0.0215        False
+ 150 10-fold x10      135      15 100      0.0215        False
+ 350   70/30 x20      244     106  20      0.0171         True
+ 350   80/20 x20      280      70  20      0.0165         True
+ 350   90/10 x20      315      35  20      0.0171         True
+ 350  90/10 x100      315      35 100      0.0141         True
+ 350 10-fold x10      315      35 100      0.0141         True
+ 569   70/30 x20      398     171  20      0.0134         True
+ 569   80/20 x20      455     114  20      0.0130         True
+ 569   90/10 x20      512      57  20      0.0134         True
+ 569  90/10 x100      512      57 100      0.0110         True
+ 569 10-fold x10      513      56 100      0.0110         True
+1000   70/30 x20      700     300  20      0.0101         True
+1000   80/20 x20      800     200  20      0.0098         True
+1000   90/10 x20      900     100  20      0.0101         True
+1000  90/10 x100      900     100 100      0.0083         True
+1000 10-fold x10      900     100 100      0.0083         True
+3000   70/30 x20     2100     900  20      0.0058         True
+3000   80/20 x20     2400     600  20      0.0056         True
+3000   90/10 x20     2700     300  20      0.0058         True
+3000  90/10 x100     2700     300 100      0.0048         True
+3000 10-fold x10     2700     300 100      0.0048         True
+
+Rows with meets_delta=True can in principle show equivalence within +/-0.02 per dataset if the true difference is ~0.
+Pooled over K independent datasets the half-width shrinks roughly as 1/sqrt(K); the pilot's pooled intervals (+/-0.011 to 0.017) come from K = 6 datasets of 150 points.
